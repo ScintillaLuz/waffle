@@ -1,0 +1,159 @@
+/*
+** Waffle
+** Responsive grid for modular layouts
+** based on http://codepen.io/ilwcss/pen/KdkbI by @ilwcss
+** and inspired by Gridism http://cobyism.com/gridism/ by @cobyism
+*/
+
+
+// Defining box model
+
+.main-wrap
+.row
+.unit
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+.main-wrap
+    max-width 1180px
+    margin 0 auto
+
+    // Wider wrap on wider screens
+    @media screen and (min-width: 1800px)
+        max-width: 1600px
+
+// Getting rid of whitespace for inline-block elements
+.row
+    font-size 0
+
+// Want to distribute elements evenly in a row?
+.row.justify
+    text-align justify
+    &:after
+    content ''
+    width 100%
+    display inline-block
+
+$type-size = 16px
+
+.unit
+    display inline-block
+    border 10px solid transparent
+    font-size $type-size
+    vertical-align top
+
+// Centering elements in a row
+.row.center
+    text-align center
+
+// Removing gutters
+.no-gutters .unit
+    border none !important
+
+// Getting rid of borders for nested units
+.row .unit.parent
+    border none
+
+// Basic units widhts
+
+$full = 100%
+
+.unit
+    width $full
+
+// Half width
+.u-50  
+    width ($full / 2)
+
+// One third
+.u-33
+    width ($full / 3)
+
+.unit-33  { width: 33.3332%; }            /* one-third */
+.unit-66  { width: 66.6665%; }            /* two-thirds */
+.unit-25  { width: 25%;      }            /* one-fourth */
+.unit-75  { width: 75%;      }            /* three-fourths */
+.unit-16  { width: 16.66666666666667%; }  /* one-sixth */
+
+
+/*
+** Responsive
+*/
+
+
+/* Stacking units based on fourths on tablet */
+@media screen and (max-width: 800px) {
+    .unit.unit-25 {
+        width: 100% !important;
+    }
+    .unit.unit-75 {
+        width: 100% !important;
+    }
+
+    .row .unit {
+        border: 7px solid transparent;
+    }
+}
+
+/* Stacking everything on phones */
+@media screen and (max-width: 570px) {
+    .row .unit {
+         width: 100% !important;
+         border: 5px solid transparent;
+    }
+
+    .row.justify .unit {
+        width: auto !important;
+    }
+}
+
+/* The waffle grid splits a row into even units */
+.split3 .unit { width: 33.3332%; }
+.split4 .unit { width: 25%; }
+.split5 .unit { width: 20%; }
+.split6 .unit { width: 16.66666666666667% }
+
+@media screen and (max-width: 1024px) {
+    .split5 .unit { width: 25%; }
+    .split6 .unit { width: 20%; }
+}
+
+@media screen and (max-width: 800px) {
+    .split4 .unit,
+    .split5 .unit,
+    .split6 .unit { width: 33.3332%; border: 7px solid transparent; }
+}
+
+@media screen and (max-width: 570px) {
+    .split3 .unit,
+    .split4 .unit,
+    .split5 .unit,
+    .split6 .unit { width: 50% !important; border: 5px solid transparent; }
+}
+
+/* Utility classes */
+
+    /* Hiding mobile elements on wider screens */
+        @media screen and (min-width: 800px) {
+
+            .hide-on-desktop {
+                display: none !important;
+            }
+        }
+
+    /* And hiding tablet/desktop elements on phones */
+        @media screen and (max-width: 570px) {
+
+            .hide-on-mobiles {
+                    display: none !important;
+                }
+            }
+
+    /* Hiding elements both on phones and tablets portrait */
+        @media screen and (max-width: 800px) {
+
+            .hide-on-tablets {
+                    display: none !important;
+                }
+            }
