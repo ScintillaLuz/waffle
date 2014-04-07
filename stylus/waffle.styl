@@ -1,166 +1,17 @@
-// Waffle
-// Responsive grid for modular layouts
-// based on http://codepen.io/ilwcss/pen/KdkbI by @ilwcss
-// and inspired by Gridism http://cobyism.com/gridism/ by @cobyism
+//Variables
 
-// Define the box-model
-.main-wrap
-.row
-.unit
-    box-sizing: border-box
+$type_size = 16px
+$border_default = 10px
+$border_tablet = 7px
+$border_phone = 5px
 
-.main-wrap
-    max-width $width_layout
-    margin 0 auto
+$full = 100%
 
-    // Wider wrap on wider screens
-    @media screen and (min-width: 1800px)
-        max-width: $width_layout_wider
+$width_layout = 1180px
+$width_layout_wider = 1600px
+$width_tablet_landscape = 1024px
+$width_tablet_portrait = 800px
+$width_phone = 640px
 
-// Define basic unit
-.unit
-    display inline-block
-    border $border_default solid transparent
-    font-size $type_size
-    vertical-align top
-
-
-// Basic Grid System
-
-// Define units
-.unit
-    width $full
-
-.u-50
-    width ($full / 2)
-
-.u-33
-    width ($full / 3)
-
-.u-66
-    width ($full / 3 * 2)
-
-.u-25
-    width ($full / 4)
-
-    @media screen and (max-width: $width_tablet_portrait)
-        .unit.u-25
-            width $full !important
-
-.u-75
-    width ($full / 4 * 3)
-
-    @media screen and (max-width: $width_tablet_portrait)
-        .unit.u-75
-            width $full !important
-
-.u-16
-    width ($full / 6)
-
-// Responsive
-.row .unit
-    @media screen and (max-width: $width_tablet_portrait)
-        // Tweak border
-        border $border_tablet solid transparent
-
-    // Stack everything on phones
-    @media screen and (max-width: $width_phone)
-        width $full !important
-        // Tweak border
-        border $border_phone solid transparent
-
-
-// Waffle Grid System: the parent tells the children
-.split3 .unit
-    width ($full / 3)
-
-.split4 .unit
-    width ($full / 4)
-
-    @media screen and (max-width: $width_tablet_portrait)
-        width ($full / 3)
-        border $border_tablet solid transparent
-
-.split5 .unit
-    width ($full / 5)
-
-    @media screen and (max-width: $width_tablet_landscape)
-        width ($full / 4)
-
-    @media screen and (max-width: $width_tablet_portrait)
-        width ($full / 3)
-        border $border_tablet solid transparent
-
-
-.split6 .unit
-    width ($full / 6)
-
-    @media screen and (max-width: $width_tablet_landscape)
-        width ($full / 5)
-
-    @media screen and (max-width: $width_tablet_portrait)
-        width ($full / 3)
-        border $border_tablet solid transparent
-
-.split3 .unit,
-.split4 .unit,
-.split5 .unit,
-.split6 .unit
-    @media screen and (max-width: $width_phone)
-        width: ($full / 2) !important
-        border $border_phone solid transparent
-
-
-// Play with the grid
-
-.row
-    // Get rid of whitespace for inline-block elements
-    font-size 0
-
-.row.justify
-    // Want to distribute elements evenly in a row?
-    text-align justify
-
-    &:after
-        content ''
-        width $full
-        display inline-block
-
-.row.justify .unit
-    @media screen and (max-width: $width_phone)
-        width auto !important
-
-.row.center
-    // Center elements in a row
-    text-align center
-
-.no-gutters .unit
-    // Remove gutters
-    border none !important
-
-.row .unit.parent
-    // Getting rid of borders for nested units
-    border none
-
-
-// Utility classes
-
-.hide-on-desktop
-    @media screen and (min-width: $width_tablet_portrait)
-        // Hide mobile elements on wider screens
-        display none !important
-
-.hide-on-mobiles
-    @media screen and (max-width: $width_phone)
-        // Hide tablet/desktop elements on phones
-        display none !important
-
-.hide-on-tablets
-    @media screen and (min-width: $width_tablet_portrait)
-        // Hide elements both on phones and tablets portrait
-        display none !important
-
-.reset-list
-    // Stop worrying about list types
-    list-style-type none
-    padding 0
+@import 'utils'
+@import 'grid'
