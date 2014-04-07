@@ -44,15 +44,15 @@
     width ($full / 4)
 
     @media screen and (max-width: $width_tablet_portrait)
-    .unit.u-25
-        width $full !important
+        .unit.u-25
+            width $full !important
 
 .u-75
     width ($full / 4 * 3)
 
     @media screen and (max-width: $width_tablet_portrait)
-    .unit.u-75
-        width $full !important
+        .unit.u-75
+            width $full !important
 
 .u-16
     width ($full / 6)
@@ -60,14 +60,14 @@
 // Responsive
 .row .unit
     @media screen and (max-width: $width_tablet_portrait)
-    // Tweak border
-    border $border_tablet solid transparent
+        // Tweak border
+        border $border_tablet solid transparent
 
     // Stack everything on phones
     @media screen and (max-width: $width_phone)
-    width $full !important
-    // Tweak border
-    border $border_phone solid transparent
+        width $full !important
+        // Tweak border
+        border $border_phone solid transparent
 
 
 // Waffle Grid System: the parent tells the children
@@ -78,37 +78,37 @@
     width ($full / 4)
 
     @media screen and (max-width: $width_tablet_portrait)
-    width ($full / 3)
-    border $border_tablet solid transparent
+        width ($full / 3)
+        border $border_tablet solid transparent
 
 .split5 .unit
     width ($full / 5)
 
     @media screen and (max-width: $width_tablet_landscape)
-    width ($full / 4)
+        width ($full / 4)
 
     @media screen and (max-width: $width_tablet_portrait)
-    width ($full / 3)
-    border $border_tablet solid transparent
+        width ($full / 3)
+        border $border_tablet solid transparent
 
 
 .split6 .unit
     width ($full / 6)
 
     @media screen and (max-width: $width_tablet_landscape)
-    width ($full / 5)
+        width ($full / 5)
 
     @media screen and (max-width: $width_tablet_portrait)
-    width ($full / 3)
-    border $border_tablet solid transparent
+        width ($full / 3)
+        border $border_tablet solid transparent
 
 .split3 .unit,
 .split4 .unit,
 .split5 .unit,
 .split6 .unit
     @media screen and (max-width: $width_phone)
-    width: ($full / 2) !important
-    border $border_phone solid transparent
+        width: ($full / 2) !important
+        border $border_phone solid transparent
 
 
 // Play with the grid
@@ -128,7 +128,7 @@
 
 .row.justify .unit
     @media screen and (max-width: $width_phone)
-    width auto !important
+        width auto !important
 
 .row.center
     // Center elements in a row
@@ -147,18 +147,18 @@
 
 .hide-on-desktop
     @media screen and (min-width: $width_tablet_portrait)
-    // Hide mobile elements on wider screens
-    display none !important
+        // Hide mobile elements on wider screens
+        display none !important
 
 .hide-on-mobiles
     @media screen and (max-width: $width_phone)
-    // Hide tablet/desktop elements on phones
-    display none !important
+        // Hide tablet/desktop elements on phones
+        display none !important
 
 .hide-on-tablets
     @media screen and (min-width: $width_tablet_portrait)
-    // Hide elements both on phones and tablets portrait
-    display none !important
+        // Hide elements both on phones and tablets portrait
+        display none !important
 
 .reset-list
     // Stop worrying about list types
