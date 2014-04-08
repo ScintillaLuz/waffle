@@ -2,16 +2,28 @@
 // for Waffle
 // a CSS inline-block framework
 
-@import url(//fonts.googleapis.com/css?family=Kavoon)
-@import url(//fonts.googleapis.com/css?family=Open\+Sans:400,300,600,700,300italic,400italic,600italic,700italic&subset=latin,latin-ext)
-@import url(//fonts.googleapis.com/css?family=Inconsolata:400,700)
+@import url("//fonts.googleapis.com/css?family=Kavoon")
+@import url("//fonts.googleapis.com/css?family=Open\+Sans:400,300,600,700,300italic,400italic,600italic,700italic&subset=latin,latin-ext")
+@import url("//fonts.googleapis.com/css?family=Inconsolata:400,700")
 
 $color_bg = #F0EFED
 $color_main = #603E66
-$color_secondary = #30C2AC
+$color_secondary = #25D1B4
 $color_blocks = #DDD9D1
 $color_special_blocks = #B2EBE2
 $color_hover = #D1BED5
+
+transition()
+    -webkit-transition arguments
+    -moz-transition arguments
+    -o-transition arguments
+    transition arguments
+
+animation()
+    -webkit-animation arguments
+    -moz-animation arguments
+    -o-animation arguments
+    animation arguments
 
 body
     color $color_main
@@ -22,6 +34,41 @@ body
     -moz-osx-font-smoothing grayscale
 
 .demo
+    text-align center
 
-    .unit
-        background-color $color_blocks
+    a
+        text-decoration none
+        color darken($color_secondary, 20%)
+
+        transition all 0.5s ease
+
+        &:hover
+            color $color_secondary
+
+    h1
+        font-family "Kavoon", Georgia, serif
+        font-size 7em
+        color $color_main
+        text-shadow 5px 5px 0px 0px $color_secondary
+
+    h2
+        font-weight 300
+        font-size 1.8em
+        line-height 1.6em
+
+    h1,
+    h2
+        margin 0
+
+    .grid
+        .unit
+            background-color $color_blocks
+            padding 15px
+
+            &:hover
+                background-color $color_hover
+                color white
+
+        code
+            font-family "Inconsolata", monospaced
+            font-size 1.4em

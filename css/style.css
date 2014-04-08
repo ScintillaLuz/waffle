@@ -1,0 +1,52 @@
+@import url("//fonts.googleapis.com/css?family=Kavoon");
+@import url("//fonts.googleapis.com/css?family=Open\+Sans:400,300,600,700,300italic,400italic,600italic,700italic&subset=latin,latin-ext");
+@import url("//fonts.googleapis.com/css?family=Inconsolata:400,700");
+body {
+  color: #603e66;
+  background-color: #f0efed;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.demo {
+  text-align: center;
+}
+.demo a {
+  text-decoration: none;
+  color: #1ea790;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.demo a:hover {
+  color: #25d1b4;
+}
+.demo h1 {
+  font-family: "Kavoon", Georgia, serif;
+  font-size: 7em;
+  color: #603e66;
+  text-shadow: 5px 5px 0px 0px #25d1b4;
+}
+.demo h2 {
+  font-weight: 300;
+  font-size: 1.8em;
+  line-height: 1.6em;
+}
+.demo h1,
+.demo h2 {
+  margin: 0;
+}
+.demo .grid .unit {
+  background-color: #ddd9d1;
+  padding: 15px;
+}
+.demo .grid .unit:hover {
+  background-color: #d1bed5;
+  color: #fff;
+}
+.demo .grid code {
+  font-family: "Inconsolata", monospaced;
+  font-size: 1.4em;
+}
