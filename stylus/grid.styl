@@ -43,14 +43,14 @@
 .u-25
     width ($full / 4)
 
-    @media screen and (max-width: $width_tablet_portrait)
+    @media screen and (max-width: 800px)
         .unit.u-25
             width $full !important
 
 .u-75
     width ($full / 4 * 3)
 
-    @media screen and (max-width: $width_tablet_portrait)
+    @media screen and (max-width: 800px)
         .unit.u-75
             width $full !important
 
@@ -59,12 +59,12 @@
 
 // Responsive
 .row .unit
-    @media screen and (max-width: $width_tablet_portrait)
+    @media screen and (max-width: 800px)
         // Tweak border
         border $border_tablet solid transparent
 
     // Stack everything on phones
-    @media screen and (max-width: $width_phone)
+    @media screen and (max-width: 640px)
         width $full !important
         // Tweak border
         border $border_phone solid transparent
@@ -77,17 +77,17 @@
 .split4 .unit
     width ($full / 4)
 
-    @media screen and (max-width: $width_tablet_portrait)
+    @media screen and (max-width: 800px)
         width ($full / 3)
         border $border_tablet solid transparent
 
 .split5 .unit
     width ($full / 5)
 
-    @media screen and (max-width: $width_tablet_landscape)
+    @media screen and (max-width: 1024px)
         width ($full / 4)
 
-    @media screen and (max-width: $width_tablet_portrait)
+    @media screen and (max-width: 800px)
         width ($full / 3)
         border $border_tablet solid transparent
 
@@ -95,10 +95,10 @@
 .split6 .unit
     width ($full / 6)
 
-    @media screen and (max-width: $width_tablet_landscape)
+    @media screen and (max-width: 1024px)
         width ($full / 5)
 
-    @media screen and (max-width: $width_tablet_portrait)
+    @media screen and (max-width: 800px)
         width ($full / 3)
         border $border_tablet solid transparent
 
@@ -106,7 +106,7 @@
 .split4 .unit,
 .split5 .unit,
 .split6 .unit
-    @media screen and (max-width: $width_phone)
+    @media screen and (max-width: 640px)
         width: ($full / 2) !important
         border $border_phone solid transparent
 
@@ -127,7 +127,7 @@
         display inline-block
 
 .row.justify .unit
-    @media screen and (max-width: $width_phone)
+    @media screen and (max-width: 640px)
         width auto !important
 
 .row.center
@@ -146,17 +146,17 @@
 // Utility classes
 
 .hide-on-desktop
-    @media screen and (min-width: $width_tablet_portrait)
+    @media screen and (min-width: 800px)
         // Hide mobile elements on wider screens
         display none !important
 
 .hide-on-mobiles
-    @media screen and (max-width: $width_phone)
+    @media screen and (max-width: 640px)
         // Hide tablet/desktop elements on phones
         display none !important
 
 .hide-on-tablets
-    @media screen and (min-width: $width_tablet_portrait)
+    @media screen and (min-width: 800px)
         // Hide elements both on phones and tablets portrait
         display none !important
 

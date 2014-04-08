@@ -13,18 +13,6 @@ $color_blocks = #DDD9D1
 $color_special_blocks = #B2EBE2
 $color_hover = #D1BED5
 
-transition()
-    -webkit-transition arguments
-    -moz-transition arguments
-    -o-transition arguments
-    transition arguments
-
-animation()
-    -webkit-animation arguments
-    -moz-animation arguments
-    -o-animation arguments
-    animation arguments
-
 body
     color $color_main
     background-color $color_bg
@@ -33,17 +21,17 @@ body
     -webkit-font-smoothing antialiased
     -moz-osx-font-smoothing grayscale
 
-.demo
-    text-align center
-
     a
         text-decoration none
         color darken($color_secondary, 20%)
 
-        transition all 0.5s ease
+        transition(color 0.5s ease)
 
         &:hover
             color $color_secondary
+
+.demo
+    text-align center
 
     h1
         font-family "Kavoon", Georgia, serif
@@ -51,7 +39,8 @@ body
         color $color_main
         text-shadow 5px 5px 0px 0px $color_secondary
 
-    h2
+    h2,
+    h3
         font-weight 300
         font-size 1.8em
         line-height 1.6em
@@ -60,15 +49,17 @@ body
     h2
         margin 0
 
-    .grid
-        .unit
-            background-color $color_blocks
-            padding 15px
+    .block
+        background-color $color_blocks
+        padding 35px
+        border-radius 5px
 
-            &:hover
-                background-color $color_hover
-                color white
+        text-align center
+        font-family "Inconsolata", monospaced
+        font-size 1.2em
 
-        code
-            font-family "Inconsolata", monospaced
-            font-size 1.4em
+        transition(all 0.5s ease)
+
+        &:hover
+            background-color $color_hover
+            cursor pointer
