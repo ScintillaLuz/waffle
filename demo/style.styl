@@ -31,27 +31,34 @@ body
         &:hover
             color darken($color_secondary, 20%)
 
+.main-wrap
+    @media screen and (max-width: 1024px)
+        padding 0.85em
+
 .demo
 
     h1
         font-family "Kavoon", Georgia, serif
         font-size 7em
         color $color_main
-        text-shadow 6px 6px 0px darken($color_secondary, 15%)
+        text-shadow 4px 4px 0px darken($color_secondary, 15%)
+
         margin 0.4em 0 0 0
 
         @media screen and (max-width: 640px)
             font-size 4em
 
     h2
-        margin 0.3em 0
         font-weight 300
         font-size 1.8em
 
+        margin 0.3em 0
+
     h3
         font-weight 800
-        text-transform uppercase
         font-size 1.3em
+        text-transform uppercase
+
         margin 3.2em 0 0.8em 0
 
     h2,
@@ -67,9 +74,9 @@ body
         padding 35px
         border-radius 5px
 
-        text-align center
         font-family "Inconsolata", monospaced
         font-size 1.2em
+        text-align center
 
         transition(all 0.5s ease)
 
@@ -90,14 +97,32 @@ body
             background-color $color_special_blocks
 
     button
+        background-color darken($color_special_blocks, 25%)
         display inline-block
         padding 10px 20px
-        border none
         border-radius 5px
-        background-color $color_main
+        border none
 
+        font-weight 600
+        font-size 0.85em
         color white
         text-transform uppercase
-        font-size 0.85em
-        font-weight 600
 
+        &:hover
+            background-color $color_special_blocks
+            color darken($color_special_blocks, 65%)
+
+        .fa
+            font-size 2em
+
+    .button-green
+        background-color darken($color_secondary, 25%)
+
+        &:hover
+            background-color $color_secondary
+            color darken($color_secondary, 65%)
+
+    .last div
+
+        &:last-of-type
+            margin-bottom 12em
