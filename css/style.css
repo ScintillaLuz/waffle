@@ -1,5 +1,5 @@
 @import url("//fonts.googleapis.com/css?family=Kavoon");
-@import url("//fonts.googleapis.com/css?family=Open\+Sans:400,300,600,700,300italic,400italic,600italic,700italic&subset=latin,latin-ext");
+@import url("http://fonts.googleapis.com/css?family=Open\+Sans:400,300,600,700,800");
 @import url("//fonts.googleapis.com/css?family=Inconsolata:400,700");
 body {
   color: #603e66;
@@ -11,30 +11,48 @@ body {
 }
 body a {
   text-decoration: none;
-  color: #1ea790;
+  color: #33c5ae;
   -webkit-transition: color 0.5s ease;
   -moz-transition: color 0.5s ease;
   -o-transition: color 0.5s ease;
   transition: color 0.5s ease;
 }
 body a:hover {
-  color: #25d1b4;
+  color: #70dac9;
 }
 .demo h1 {
   font-family: "Kavoon", Georgia, serif;
   font-size: 7em;
   color: #603e66;
-  text-shadow: 5px 5px 0px 0px #25d1b4;
+  text-shadow: 6px 6px 0px #81decf;
+  margin: 0.4em 0 0 0;
+}
+@media screen and (max-width: 640px) {
+  .demo h1 {
+    font-size: 4em;
+  }
+}
+.demo h2 {
+  margin: 0.3em 0;
+  font-weight: 300;
+  font-size: 1.8em;
+}
+.demo h3 {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  margin: 3.2em 0 0.8em 0;
 }
 .demo h2,
 .demo h3 {
-  font-weight: 300;
-  font-size: 1.8em;
   line-height: 1.6em;
 }
-.demo h1,
-.demo h2 {
-  margin: 0;
+@media screen and (max-width: 640px) {
+  .demo h2,
+  .demo h3 {
+    font-weight: 400;
+    font-size: 1.2em;
+  }
 }
 .demo .block {
   background-color: #ddd9d1;
@@ -53,9 +71,15 @@ body a:hover {
   cursor: pointer;
 }
 .demo .size {
-  color: #1ea790;
+  color: #2ba491;
 }
 .demo .intro {
+  background-color: #d1bed5;
+}
+.demo .hide-on-desktop .block {
+  background-color: #b2ebe2;
+}
+.demo .hide-on-desktop .block:hover {
   background-color: #d1bed5;
 }
 .demo button {
