@@ -122,6 +122,9 @@
   width: 100%;
   display: inline-block;
 }
+.row.justify .unit {
+  width: auto;
+}
 @media screen and (max-width: 640px) {
   .row.justify .unit {
     width: auto !important;
@@ -135,6 +138,9 @@
 }
 .row .unit.parent {
   border: none;
+}
+.row .unit.parent .unit {
+  border: border 10px solid transparent;
 }
 @media screen and (min-width: 800px) {
   .hide-on-desktop {
