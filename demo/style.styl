@@ -6,12 +6,14 @@
 @import url("//fonts.googleapis.com/css?family=Open\+Sans:400,300,600,700,300italic,400italic,600italic,700italic&subset=latin,latin-ext")
 @import url("//fonts.googleapis.com/css?family=Inconsolata:400,700")
 
+@import '../stylus/utils'
+
 $color_bg = #F0EFED
 $color_main = #603E66
 $color_secondary = #25D1B4
 $color_blocks = #DDD9D1
-$color_special_blocks = #B2EBE2
-$color_hover = #D1BED5
+$color_special_blocks = #D1BED5
+$color_hover = #B2EBE2
 
 body
     color $color_main
@@ -31,7 +33,6 @@ body
             color $color_secondary
 
 .demo
-    text-align center
 
     h1
         font-family "Kavoon", Georgia, serif
@@ -63,3 +64,20 @@ body
         &:hover
             background-color $color_hover
             cursor pointer
+
+    .size
+        color darken($color_secondary, 20%)
+
+    button
+        display inline-block
+        padding 10px 20px
+        border none
+        border-radius 5px
+        background-color $color_main
+
+        color white
+        text-shadow 1px 1px 2px darken($color_main, 40%)
+        text-transform uppercase
+        font-size 0.85em
+        font-weight 600
+
