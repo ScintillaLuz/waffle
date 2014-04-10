@@ -1,9 +1,9 @@
 ## start developing
 
-**Install stylus npm module**
+**1. Install stylus npm module**
 
 `` $ npm install stylus -g ``
 
-**Start the compiler**
+**2. Start the compiler**
 
 `` $ make start ``
