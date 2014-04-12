@@ -6,7 +6,7 @@
 
 **2. Start the compiler**
 
-`` $ make start ``
+`` $ make dev ``
 
 ## view demo page
 
