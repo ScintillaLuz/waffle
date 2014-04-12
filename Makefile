@@ -1,5 +1,5 @@
-start:
-	stylus -w stylus/waffle.styl -o css
+dev:
+	stylus -w stylus/waffle.styl demo/style.styl -o css
 
 page:
 	rm -rf css && mkdir css
