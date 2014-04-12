@@ -7,3 +7,7 @@
 **2. Start the compiler**
 
 `` $ make start ``
+
+## view demo page
+
+``$ make page``
