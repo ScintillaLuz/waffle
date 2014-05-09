@@ -8,7 +8,7 @@
 .main-wrap
 .row
 .unit
-    box-sizing: border-box
+    box-sizing border-box
 
 .main-wrap
     max-width $width_layout
@@ -16,7 +16,12 @@
 
     // Wider wrap on wider screens
     @media screen and (min-width: 1800px)
-        max-width: $width_layout_wider
+        max-width $width_layout_wider
+
+.inside-wrap .row
+    // Wrapping individual rows
+    max-width $width_layout
+    margin 0 auto
 
 // Define basic unit
 .unit
@@ -60,8 +65,8 @@
 
 // Responsive
 .row .unit
+    // Tweak border
     @media screen and (max-width: 800px)
-        // Tweak border
         border $border_tablet solid transparent
 
     // Stack everything on phones
@@ -91,7 +96,6 @@
     @media screen and (max-width: 800px)
         width ($full / 3)
         border $border_tablet solid transparent
-
 
 .split6 .unit
     width ($full / 6)
@@ -148,19 +152,24 @@
 
 // Utility classes
 
-.hide-on-desktop
-    @media screen and (min-width: 800px)
-        // Hide mobile elements on wider screens
+.hide-on-tablets
+    // Hide mobile elements on tablets portrait and desktop
+    @media screen and (max-width: 800px)
+        display none !important
+
+.show-on-tablets
+    // Show elements on tablet portraits and phones
+    @media screen and (min-width: 799px)
         display none !important
 
 .hide-on-mobiles
-    @media screen and (max-width: 640px)
-        // Hide tablet/desktop elements on phones
+    // Hide elements only on phones landscape
+    @media screen and (max-width: 639px)
         display none !important
 
-.hide-on-tablets
-    @media screen and (min-width: 800px)
-        // Hide elements both on phones and tablets portrait
+.show-on-mobiles
+    // Show elements only on phones landscape
+    @media screen and (min-width: 640px)
         display none !important
 
 .reset-list

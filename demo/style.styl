@@ -10,7 +10,7 @@
 
 $color_bg = #F0EFED
 $color_main = #603E66
-$color_secondary = #B2EBE2
+$color_two = #B2EBE2
 $color_blocks = #DDD9D1
 $color_special_blocks = #D1BED5
 
@@ -24,12 +24,12 @@ body
 
     a
         text-decoration none
-        color darken($color_secondary, 40%)
+        color darken($color_two, 40%)
 
         transition(color 0.5s ease)
 
         &:hover
-            color darken($color_secondary, 20%)
+            color darken($color_two, 20%)
 
 .main-wrap
     @media screen and (max-width: 1024px)
@@ -41,7 +41,7 @@ body
         font-family "Kavoon", Georgia, serif
         font-size 7em
         color $color_main
-        text-shadow 4px 4px 0px darken($color_secondary, 15%)
+        text-shadow 4px 4px 0px darken($color_two, 15%)
 
         margin 0.4em 0 0 0
 
@@ -81,20 +81,14 @@ body
         transition(all 0.5s ease)
 
         &:hover
-            background-color $color_secondary
+            background-color $color_two
             cursor pointer
 
     .size
-        color darken($color_secondary, 50%)
+        color darken($color_two, 50%)
 
     .intro
         background-color $color_special_blocks
-
-    .hide-on-desktop .block
-        background-color $color_secondary
-
-        &:hover
-            background-color $color_special_blocks
 
     button
         background-color darken($color_special_blocks, 25%)
@@ -116,11 +110,11 @@ body
             font-size 2em
 
     .button-green
-        background-color darken($color_secondary, 25%)
+        background-color darken($color_two, 25%)
 
         &:hover
-            background-color $color_secondary
-            color darken($color_secondary, 65%)
+            background-color $color_two
+            color darken($color_two, 65%)
 
     .last div
 
