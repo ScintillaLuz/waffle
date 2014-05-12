@@ -2,17 +2,18 @@
 // for Waffle
 // a CSS inline-block framework
 
-@import url("http://fonts.googleapis.com/css?family=Kavoon")
-@import url("http://fonts.googleapis.com/css?family=Open\+Sans:400,300,600,700,800")
-@import url("http://fonts.googleapis.com/css?family=Inconsolata:400,700")
+@import url("//fonts.googleapis.com/css?family=Kavoon")
+@import url("//fonts.googleapis.com/css?family=Open\+Sans:400,300,600,700,800")
+@import url("//fonts.googleapis.com/css?family=Inconsolata:400,700")
 
 @import '../stylus/utils'
 
 $color_bg = #F0EFED
-$color_main = #603E66
-$color_two = #B2EBE2
+$color_main = #3F3529
+$color_two = #AEE4DC
+$color_three = #DCBEDD
 $color_blocks = #DDD9D1
-$color_special_blocks = #D1BED5
+$color_separators = #EDD796
 
 body
     color $color_main
@@ -24,24 +25,22 @@ body
 
     a
         text-decoration none
-        color darken($color_two, 40%)
+        color darken($color_two, 50%)
 
         transition(color 0.5s ease)
 
         &:hover
-            color darken($color_two, 20%)
+            color darken($color_three, 30%)
 
-.main-wrap
-    @media screen and (max-width: 1024px)
-        padding 0.85em
-
-.demo
+.banner-top
+    background-color $color_main
+    width $full
 
     h1
-        font-family "Kavoon", Georgia, serif
+        font-family "Kavoon", cursive
+        font-weight 400
         font-size 7em
-        color $color_main
-        text-shadow 4px 4px 0px darken($color_two, 15%)
+        color $color_bg
 
         margin 0.4em 0 0 0
 
@@ -49,13 +48,47 @@ body
             font-size 4em
 
     h2
+        color $color_bg
         font-weight 300
-        font-size 1.8em
+        font-size 2em
 
-        margin 0.3em 0
+        margin 0.5em 0 2em 0
+
+        @media screen and (max-width: 640px)
+            font-weight 400
+            font-size 1.3em
+
+        a
+            color darken($color_two, 15%)
+
+            &:hover
+                color darken($color_three, 15%)
+
+.menu-top
+    background-color $color_two
+
+    ul
+        li
+            font-weight 600
+            text-transform uppercase
+            padding 0.5em
+
+            a
+                padding 0.5em
+
+                &:hover
+                    background-color darken($color_two, 40%)
+                    border-radius 3px
+                    color white
+
+.main-wrap
+    @media screen and (max-width: 1024px)
+        padding 0.85em
+
+.demo
 
     h3
-        font-weight 800
+        font-weight 400
         font-size 1.3em
         text-transform uppercase
 
@@ -88,35 +121,67 @@ body
         color darken($color_two, 50%)
 
     .intro
-        background-color $color_special_blocks
+        background-color $color_two
+
+        &:hover
+            background-color $color_separators
 
     button
-        background-color darken($color_special_blocks, 25%)
+        background-color $color_separators
         display inline-block
         padding 10px 20px
         border-radius 5px
         border none
 
-        font-weight 600
+        font-weight 400
         font-size 0.85em
-        color white
+        color lighten($color_main, 15%)
         text-transform uppercase
+        cursor pointer
 
         &:hover
-            background-color $color_special_blocks
-            color darken($color_special_blocks, 65%)
+            background-color darken($color_separators, 10%)
+            color $color_main
 
         .fa
             font-size 2em
 
     .button-green
-        background-color darken($color_two, 25%)
+        background-color $color_two
+        color darken($color_two, 55%)
 
         &:hover
-            background-color $color_two
-            color darken($color_two, 65%)
+            background-color darken($color_two, 10%)
+            color darken($color_two, 75%)
 
-    .last div
+    .hide-on-tablets .block
+        background-color $color_two
 
-        &:last-of-type
-            margin-bottom 12em
+        &:hover
+            background-color darken($color_two, 15%)
+
+    .show-on-tablets .block
+
+        &:hover
+            background-color darken($color_blocks, 15%)
+
+    .hide-on-mobiles .block
+        background-color $color_separators
+
+        &:hover
+            background-color darken($color_separators, 15%)
+
+    .show-on-mobiles .block
+        background-color $color_three
+
+        &:hover
+            background-color darken($color_three, 15%)
+
+footer
+    margin 3em 0 0 0
+    background-color $color_blocks
+
+    ul
+        li
+            padding 0.2em
+            font-weight 600

@@ -11,9 +11,8 @@
 </head>
 <body>
 
-    <div class="main-wrap demo">
-
-        <div class="row center">
+<div class="banner-top">
+    <div class="row center">
 
             <div class="unit">
                 <h1>Waffle</h1>
@@ -23,12 +22,44 @@
                 <h2>A lightweight CSS framework<br>based on inline-block elements by <a href="http://twitter.com/scintillaluz">@scintillaluz</a></h2>
             </div>
 
+    </div>
+</div>
+
+<div class="menu-top">
+    <div class="row center">
+
+        <div class="unit">
+            <ul class="menu-list">
+
+                <li>
+                    <a href="#basic-grid">basic grid</a>
+                </li>
+
+                <li>
+                   <a href="#waffle-grid">waffle grid</a>
+                </li>
+
+                <li><a href="#gridception">gridceptions</a></li>
+
+                <li>
+                    <a href="#justify">justify</a>
+                </li>
+
+                <li>
+                    <a href="#responsive">responsive utilities</a>
+                </li>
+
+            </ul>
         </div>
 
+    </div>
+</div>
+
+    <div class="main-wrap demo">
 
         <div class="row center">
             <div class="unit">
-                <h3>The Basic Grid</h3>
+                <h3 id="basic-grid">The Basic Grid</h3>
             </div>
         </div>
 
@@ -93,7 +124,7 @@
 
         <div class="row center">
             <div class="unit">
-                <h3>The Waffle Grid</h3>
+                <h3 id="waffle-grid">The Waffle Grid</h3>
             </div>
         </div>
 
@@ -310,7 +341,7 @@
         <div class="row center">
 
             <div class="unit">
-                <h3>Gridceptions</h3>
+                <h3 id="gridception">Gridceptions</h3>
             </div>
 
             <div class="unit">
@@ -475,11 +506,11 @@
 
         <div class="row center">
             <div class="unit">
-                <h3>Justify all the things!!!</h3>
+                <h3 id="justify">Justify all the things!!!</h3>
             </div>
         </div>
 
-        <div class="row justify hide-on-mobiles">
+        <div class="row justify hide-on-tablets">
 
             <div class="unit">
                 <button class="button-green">eat me!</button>
@@ -513,7 +544,7 @@
             </div>
         </div>
 
-        <div class="row justify last">
+        <div class="row justify">
 
             <div class="unit">
                 <button>previous</button>
@@ -529,6 +560,36 @@
 
         </div>
 
+        <div class="row center">
+            <div class="unit">
+                <h3 id="responsive">magically responsive classes</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="unit hide-on-tablets">
+                <div class="block">Hide on desktop and tablets, sneaky!</div>
+            </div>
+            <div class="unit show-on-tablets">
+                <div class="block">Show on desktop and tablets, juicy!</div>
+            </div>
+            <div class="unit hide-on-mobiles">
+                <div class="block">Hide only on phones landscape, lecker!</div>
+            </div>
+            <div class="unit show-on-mobiles">
+                <div class="block">Show only on phones please, yummy!</div>
+            </div>
+        </div>
+
     </div>
+
+<footer>
+    <div class="row center">
+        <ul class="unit menu-list">
+            <li>Waffle by <a href="http://twitter.com/scintillaluz">scintillaluz</a></li>
+        </ul>
+    </div>
+</footer>
+
 </body>
 </html>

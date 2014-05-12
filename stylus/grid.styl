@@ -4,6 +4,10 @@
 // and inspired by Gridism http://cobyism.com/gridism/ by @cobyism
 // with much help wow from @vrde
 
+// Reset default margins
+body
+    margin 0
+
 // Define the box-model
 .main-wrap
 .row
@@ -154,12 +158,12 @@
 
 .hide-on-tablets
     // Hide mobile elements on tablets portrait and desktop
-    @media screen and (max-width: 800px)
+    @media screen and (min-width: 800px)
         display none !important
 
 .show-on-tablets
     // Show elements on tablet portraits and phones
-    @media screen and (min-width: 799px)
+    @media screen and (max-width: 799px)
         display none !important
 
 .hide-on-mobiles
@@ -176,3 +180,9 @@
     // Stop worrying about list types
     list-style-type none
     padding 0
+
+.menu-list
+    @extend .reset-list
+
+    li
+        display inline-block
