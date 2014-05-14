@@ -15,6 +15,7 @@ body
     box-sizing border-box
 
 .row
+    font-size 0
     max-width $width_layout
     margin 0 auto
 
@@ -28,7 +29,6 @@ body
     border $border_default solid transparent
     font-size $type_size
     vertical-align top
-
 
 // Basic Grid System
 
@@ -117,10 +117,6 @@ body
 
 // Play with the grid
 
-.row
-    // Get rid of whitespace for inline-block elements
-    font-size 0
-
 .row.justify
     // Want to distribute elements evenly in a row?
     text-align justify
@@ -133,7 +129,6 @@ body
 .row.justify .unit
     width auto
 
-.row.justify .unit
     @media screen and (max-width: 640px)
         width auto !important
 
