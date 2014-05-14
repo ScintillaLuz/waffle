@@ -14,18 +14,13 @@ body
 .unit
     box-sizing border-box
 
-.main-wrap
+.row
     max-width $width_layout
     margin 0 auto
 
     // Wider wrap on wider screens
     @media screen and (min-width: 1800px)
         max-width $width_layout_wider
-
-.inside-wrap .row
-    // Wrapping individual rows
-    max-width $width_layout
-    margin 0 auto
 
 // Define basic unit
 .unit
