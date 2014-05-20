@@ -147,22 +147,22 @@ body
 // Utility classes
 
 .no-desktop
-    // Show elements on tablet portraits and phones
+    // Elements are hidden only on desktop screens
     @media screen and (min-width: 960px)
         display none !important
 
 .no-phone
-    // Hide elements only on phones landscape
+    // Elements are hidden only on small screens, phones
     @media screen and (max-width: 640px)
         display none !important
 
 .only-desktop
-    // Show elements only on phones landscape
+    // Elements are shown only on desktop screens
     @media screen and (max-width: 960px)
         display none !important
 
 .only-phone
-    // Show elements only on phones landscape
+    // Elements are shown only on small screens, phones
     @media screen and (min-width: 640px)
         display none !important
 
