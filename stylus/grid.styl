@@ -109,13 +109,23 @@ body
         width ($full / 3)
         border $border_tablet solid transparent
 
-.split3 .unit,
-.split4 .unit,
-.split5 .unit,
-.split6 .unit
-    @media screen and (max-width: 640px)
-        width: ($full / 2) !important
-        border $border_phone solid transparent
+.split3
+.split4
+.split5
+.split6
+    .unit
+        @media screen and (max-width: 640px)
+            width: ($full / 2) !important
+            border $border_phone solid transparent
+
+.split3.one-column
+.split4.one-column
+.split5.one-column
+.split6.one-column
+    .unit
+        @media screen and (max-width: 640px)
+            width: ($full) !important
+            border $border_phone solid transparent
 
 
 // Play with the grid
