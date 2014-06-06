@@ -68,15 +68,13 @@ body
 // Responsive
 .row
     .unit
-    @media screen and (max-width: 800px)
-        border $border_tablet solid transparent
-        // Tweak border
+        @media screen and (max-width: 800px)
+            border $border_tablet solid transparent
 
-    // Stack everything on phones
-    @media screen and (max-width: 640px)
-        width $full !important
-        border $border_phone solid transparent
-        // Tweak border
+        // Stack everything on phones
+        @media screen and (max-width: 640px)
+            width $full !important
+            border $border_phone solid transparent
 
 
 // Waffle Grid System: the parent tells the children
@@ -139,8 +137,8 @@ body
 
 // Play with the grid
 
+// Want to distribute elements evenly in a row?
 .row.justify
-    // Want to distribute elements evenly in a row?
     text-align justify
 
     &::after
@@ -155,19 +153,19 @@ body
         @media screen and (max-width: 640px)
             width auto !important
 
+// Center elements in a row
 .row.center
     text-align center
-    // Center elements in a row
 
+// Remove gutters
 .no-gutters
     .unit
         border none !important
-    // Remove gutters
 
+// Getting rid of borders for nested units
 .row
     .unit.nested
         border none
-    // Getting rid of borders for nested units
 
 // Utility classes
 
