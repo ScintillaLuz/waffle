@@ -66,7 +66,8 @@ body
     width ($full / 6)
 
 // Responsive
-.row .unit
+.row
+    .unit
     // Tweak border
     @media screen and (max-width: 800px)
         border $border_tablet solid transparent
@@ -79,35 +80,43 @@ body
 
 
 // Waffle Grid System: the parent tells the children
-.split3 .unit
-    width ($full / 3)
-
-.split4 .unit
-    width ($full / 4)
-
-    @media screen and (max-width: 800px)
+.split3
+    .unit
         width ($full / 3)
-        border $border_tablet solid transparent
 
-.split5 .unit
-    width ($full / 5)
+        @media screen and (max-width: 800px)
+            width ($full / 2)
+            border $border_tablet solid transparent
 
-    @media screen and (max-width: 1024px)
+.split4
+    .unit
         width ($full / 4)
 
-    @media screen and (max-width: 800px)
-        width ($full / 3)
-        border $border_tablet solid transparent
+        @media screen and (max-width: 800px)
+            width ($full / 3)
+            border $border_tablet solid transparent
 
-.split6 .unit
-    width ($full / 6)
-
-    @media screen and (max-width: 1024px)
+.split5
+    .unit
         width ($full / 5)
 
-    @media screen and (max-width: 800px)
-        width ($full / 3)
-        border $border_tablet solid transparent
+        @media screen and (max-width: 1024px)
+            width ($full / 4)
+
+        @media screen and (max-width: 800px)
+            width ($full / 3)
+            border $border_tablet solid transparent
+
+.split6
+    .unit
+        width ($full / 6)
+
+        @media screen and (max-width: 1024px)
+            width ($full / 5)
+
+        @media screen and (max-width: 800px)
+            width ($full / 3)
+            border $border_tablet solid transparent
 
 .split3
 .split4
@@ -139,23 +148,26 @@ body
         width $full
         display inline-block
 
-.row.justify .unit
-    width auto
+.row.justify
+    .unit
+        width auto
 
-    @media screen and (max-width: 640px)
-        width auto !important
+        @media screen and (max-width: 640px)
+            width auto !important
 
 .row.center
-    // Center elements in a row
     text-align center
+    // Center elements in a row
 
-.no-gutters .unit
+.no-gutters
+    .unit
+        border none !important
     // Remove gutters
-    border none !important
 
-.row .unit.nested
+.row
+    .unit.nested
+        border none
     // Getting rid of borders for nested units
-    border none
 
 // Utility classes
 
