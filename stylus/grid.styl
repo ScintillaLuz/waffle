@@ -115,7 +115,7 @@ body
 .split6
     .unit
         @media screen and (max-width: 640px)
-            width: ($full / 2) !important
+            width ($full / 2) !important
             border $border_phone solid transparent
 
 .split3.one-column
@@ -124,14 +124,41 @@ body
 .split6.one-column
     .unit
         @media screen and (max-width: 640px)
-            width: ($full) !important
+            width $full !important
             border $border_phone solid transparent
 
 
+// Experimental Grids
+.three-to-one
+    .unit
+        &:nth-of-type(1)
+            width ($full / 4)
+
+            @media screen and (max-width: 800px)
+                width ($full / 3) !important
+
+            @media screen and (max-width: 640px)
+                width $full !important
+
+        &:nth-of-type(2)
+            width ($full / 2)
+
+            @media screen and (max-width: 800px)
+                width ($full * 2 / 3) !important
+
+            @media screen and (max-width: 640px)
+                width $full !important
+
+        &:nth-of-type(3)
+            width ($full / 4)
+
+            @media screen and (max-width: 800px)
+                width $full !important
+
 // Play with the grid
 
+// Want to distribute elements evenly in a row?
 .row.justify
-    // Want to distribute elements evenly in a row?
     text-align justify
 
     &::after
@@ -145,48 +172,48 @@ body
     @media screen and (max-width: 640px)
         width auto !important
 
+// Center elements in a row
 .row.center
-    // Center elements in a row
     text-align center
 
+// Remove gutters
 .no-gutters .unit
-    // Remove gutters
     border none !important
 
+// Getting rid of borders for nested units
 .row .unit.nested
-    // Getting rid of borders for nested units
     border none
 
 // Utility classes
 
+// Elements are hidden only on desktop screens
 .no-desktop
-    // Elements are hidden only on desktop screens
     @media screen and (min-width: 960px)
         display none !important
 
+// Elements are hidden only on small screens, phones
 .no-phone
-    // Elements are hidden only on small screens, phones
     @media screen and (max-width: 640px)
         display none !important
 
+// Elements are shown only on desktop screens
 .only-desktop
-    // Elements are shown only on desktop screens
     @media screen and (max-width: 960px)
         display none !important
 
+// Elements are shown only on small screens, phones
 .only-phone
-    // Elements are shown only on small screens, phones
     @media screen and (min-width: 640px)
         display none !important
 
+// Stop worrying about list types
 .reset-list
-    // Stop worrying about list types
     list-style-type none
     padding 0
     margin 0
 
+// When lists are used as horizontal menus
 .menu-list
-    // When lists are used as horizontal menus
     @extend .reset-list
 
     li
