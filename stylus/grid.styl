@@ -9,7 +9,6 @@ body
     margin 0
 
 // Define the box-model
-.main-wrap
 .row
 .unit
     box-sizing border-box
@@ -116,6 +115,7 @@ body
             width ($full / 3)
             border $border_tablet solid transparent
 
+// The basic split keeps two columns on phones
 .split3
 .split4
 .split5
@@ -125,6 +125,7 @@ body
             width ($full / 2) !important
             border $border_phone solid transparent
 
+// To have just one column on phones when using split
 .split3.one-column
 .split4.one-column
 .split5.one-column
@@ -133,34 +134,6 @@ body
         @media screen and (max-width: 640px)
             width $full !important
             border $border_phone solid transparent
-
-
-// Experimental Grids
-.three-to-one
-    .unit
-        &:nth-of-type(1)
-            width ($full / 4)
-
-            @media screen and (max-width: 800px)
-                width ($full / 3) !important
-
-            @media screen and (max-width: 640px)
-                width $full !important
-
-        &:nth-of-type(2)
-            width ($full / 2)
-
-            @media screen and (max-width: 800px)
-                width ($full * 2 / 3) !important
-
-            @media screen and (max-width: 640px)
-                width $full !important
-
-        &:nth-of-type(3)
-            width ($full / 4)
-
-            @media screen and (max-width: 800px)
-                width $full !important
 
 // Play with the grid
 
@@ -184,16 +157,12 @@ body
 .row.center
     text-align center
 
-// Remove gutters
-<<<<<<< HEAD
-.no-gutters .unit
-    border none !important
-
 // Getting rid of borders for nested units
 .row
     .unit.nested
-        border none
+        border none !important
 
+// Remove gutters (applies on the row)
 .no-gutters
     .unit
         border none !important
