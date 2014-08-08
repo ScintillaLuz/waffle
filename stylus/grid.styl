@@ -75,6 +75,22 @@ body
             width $full !important
             border $border_phone solid transparent
 
+// Quick and dirty centered columns
+.unit.single-column
+    &.u-16
+    &.u-25
+    &.u-33
+    &.u-50
+    &.u-66
+    &.u-75
+        display block
+        margin 0 auto
+
+    @media screen and (max-width: 800px)
+        width ($full - $tablet_margin) !important
+
+    @media screen and (max-width: 640px)
+        width $full !important
 
 // Waffle Grid System: the parent tells the children
 .split3
@@ -126,10 +142,10 @@ body
             border $border_phone solid transparent
 
 // To have just one column on phones when using split
-.split3.one-column
-.split4.one-column
-.split5.one-column
-.split6.one-column
+.split3.one-column-phones
+.split4.one-column-phones
+.split5.one-column-phones
+.split6.one-column-phones
     .unit
         @media screen and (max-width: 640px)
             width $full !important
@@ -153,7 +169,7 @@ body
         @media screen and (max-width: 640px)
             width auto !important
 
-// Center elements in a row
+// Center every element in a row
 .row.center
     text-align center
 
