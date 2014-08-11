@@ -14,9 +14,9 @@ body
     box-sizing border-box
 
 .row
-    font-size 0
     max-width $width_layout
     margin 0 auto
+    font-size 0
 
     // Wider wrap on wider screens
     @media screen and (min-width: 1800px)
@@ -29,8 +29,8 @@ body
 .unit
     display inline-block
     border $border_default solid transparent
-    font-size $type_size
     vertical-align top
+    font-size $type_size
 
 // Basic Grid System
 
@@ -87,7 +87,7 @@ body
         margin 0 auto
 
     @media screen and (max-width: 800px)
-        width ($full - $tablet_margin) !important
+        width ($full - $tablet_margins) !important
 
     @media screen and (max-width: 640px)
         width $full !important
@@ -207,9 +207,9 @@ body
 
 // Stop worrying about list types
 .reset-list
-    list-style-type none
-    padding 0
     margin 0
+    padding 0
+    list-style-type none
 
 // When lists are used as horizontal menus
 .menu-list
