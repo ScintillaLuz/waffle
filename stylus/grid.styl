@@ -8,6 +8,12 @@
 body
     margin 0
 
+// Wider wrap on wider screens
+body.wider
+    .row
+        @media screen and (min-width: 1800px)
+            max-width $width_layout_wider
+
 // Define the box-model
 .row
 .unit
@@ -17,10 +23,6 @@ body
     max-width $width_layout
     margin 0 auto
     font-size 0
-
-    // Wider wrap on wider screens
-    @media screen and (min-width: 1800px)
-        max-width $width_layout_wider
 
 .row.no-wrap
     max-width 100% !important
@@ -76,21 +78,22 @@ body
             border $border_phone solid transparent
 
 // Quick and dirty centered columns
-.unit.single-column
-    &.u-16
-    &.u-25
-    &.u-33
-    &.u-50
-    &.u-66
-    &.u-75
-        display block
-        margin 0 auto
+.row.single-column
+    .unit
+        &.u-16
+        &.u-25
+        &.u-33
+        &.u-50
+        &.u-66
+        &.u-75
+            display block
+            margin 0 auto
 
-    @media screen and (max-width: 800px)
-        width ($full - $tablet_margins) !important
+        @media screen and (max-width: 800px)
+            width ($full - $tablet_margins) !important
 
-    @media screen and (max-width: 640px)
-        width $full !important
+        @media screen and (max-width: 640px)
+            width $full !important
 
 // Waffle Grid System: the parent tells the children
 .split3
