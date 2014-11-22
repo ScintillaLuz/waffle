@@ -31,7 +31,7 @@ body.wider
 .unit
     display inline-block
     border $border_default solid transparent
-    vertical-align baseline
+    vertical-align top
     font-size $type_size
 
 // Basic Grid System
@@ -40,34 +40,40 @@ body.wider
 .unit
     width $full
 
-.u-50
-    width ($full / 2)
-
-.u-33
-    width ($full / 3)
-
-.u-66
-    width ($full * 2 / 3)
+.u-16
+    width ($full / 6)
 
 .u-25
     width ($full / 4)
 
+.u-33
+    width ($full / 3)
+
+.u-50
+    width ($full / 2)
+
+.u-66
+    width ($full * 2 / 3)
+
 .u-75
     width ($full * 3 / 4)
-
-.u-16
-    width ($full / 6)
 
 // Responsive
 .row
     .unit
-        // Stack everything on tablets vertical
-        @media screen and (max-width: 800px)
-            border $border_tablet solid transparent
-            width $full !important
+        &.u-16
+        &.u-25
+        &.u-33
+        &.u-50
+        &.u-66
+        &.u-75
+            // Stack everything on tablets vertical
+            @media screen and (max-width: 800px)
+                border $border_tablet solid transparent
+                width $full !important
 
-        @media screen and (max-width: 640px)
-            border $border_phone solid transparent
+            @media screen and (max-width: 640px)
+                border $border_phone solid transparent
 
 // Quick and dirty centered columns
 .row.single-column
@@ -81,11 +87,11 @@ body.wider
             display block
             margin 0 auto
 
-        @media screen and (max-width: 800px)
-            width ($full - $tablet_margins) !important
+            @media screen and (max-width: 800px)
+                width ($full - $tablet_margins) !important
 
-        @media screen and (max-width: 640px)
-            width $full !important
+            @media screen and (max-width: 640px)
+                width $full !important
 
 // Waffle Grid System: the parent tells the children
 .split3
@@ -160,6 +166,7 @@ body.wider
 .row.justify
     .unit
         width auto
+        vertical-align baseline !important
 
         @media screen and (max-width: 640px)
             width auto !important
