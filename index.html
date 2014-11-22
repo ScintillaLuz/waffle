@@ -8,612 +8,252 @@
 
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/waffle.css" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
 
-<div class="banner-top">
-    <div class="row center">
 
-            <div class="unit">
-                <h1>Waffle</h1>
-            </div>
+    <div class="row no-wrap center intro">
+        <div class="unit">
+            <img src="img/bodyparts.jpg" alt="intro-img">
+            <h1>Waffle</h1>
+            <h2>The first cannibal (and lightweight) CSS framework based on inline-block</h2>
+            <p>Built by <a href="https://twitter.com/scintillaluz">@Scintillaluz</a> please fork me on <a href="">Github</a></p>
+        </div>
+        <div class="unit menu">
+            <a href="#basic-grid" class="button">The Basic Grid</a>
+            <a href="#waffle-grid" class="button">Waffle Grid System</a>
+            <a href="#play-with-grid" class="button">Play with the Grid</a>
+            <a href="#waffle-in-production" class="button">Waffle in Production</a>
+        </div>
+    </div>
 
-            <div class="unit">
-                <h2>A lightweight CSS framework<br>based on inline-block elements by <a href="http://twitter.com/scintillaluz">@scintillaluz</a></h2>
-            </div>
+    <div class="row">
+        <div class="unit">
+            <h3 class="title-chapter">About Waffle</h3>
+            <p></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="unit">
+            <h3 id="basic-grid" class="title-chapter">The Basic Grid</h3>
+            <p></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="unit"><div class="block">.unit <span class="extra-info">(default width is 100%)</span></div></div>
+        <div class="unit u-50"><div class="block"><span class="extra-info">.unit</span>.u-50</div></div>
+        <div class="unit u-50"><div class="block"><span class="extra-info">.unit</span>.u-50</div></div>
+        <div class="unit u-33"><div class="block"><span class="extra-info">.unit</span>.u-33</div></div>
+        <div class="unit u-66"><div class="block"><span class="extra-info">.unit</span>.u-66</div></div>
+        <div class="unit u-25"><div class="block"><span class="extra-info">.unit</span>.u-25</div></div>
+        <div class="unit u-50"><div class="block"><span class="extra-info">.unit</span>.u-50</div></div>
+        <div class="unit u-25"><div class="block"><span class="extra-info">.unit</span>.u-25</div></div>
+        <div class="unit u-75"><div class="block"><span class="extra-info">.unit</span>.u-75</div></div>
+        <div class="unit u-25"><div class="block"><span class="extra-info">.unit</span>.u-25</div></div>
+        <div class="unit u-16"><div class="block"><span class="extra-info">.unit</span>.u-16</div></div>
+        <div class="unit u-16"><div class="block"><span class="extra-info">.unit</span>.u-16</div></div>
+        <div class="unit u-16"><div class="block"><span class="extra-info">.unit</span>.u-16</div></div>
+        <div class="unit u-16"><div class="block"><span class="extra-info">.unit</span>.u-16</div></div>
+        <div class="unit u-33"><div class="block"><span class="extra-info">.unit</span>.u-33</div></div>
+    </div>
+
+    <div class="row single-column">
+        <div class="unit u-66">
+            <div class="block">.row.single-column<span class="extra-info"> .unit.u-66 (quick and dirty single centered columns)</span></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="unit">
+            <h3 id="waffle-grid" class="title-chapter">Waffle Grid System</h3>
+            <p></p>
+        </div>
+    </div>
+
+    <div class="row split3">
+        <div class="unit"><div class="block">.row.split3 <span class="extra-info">.unit</span></div></div>
+        <div class="unit"><div class="block">.row.split3 <span class="extra-info">.unit</span></div></div>
+        <div class="unit"><div class="block">.row.split3 <span class="extra-info">.unit</span></div></div>
+    </div>
+
+    <div class="row split4">
+        <div class="unit"><div class="block">.row.split4 <span class="extra-info">.unit</span></div></div>
+        <div class="unit"><div class="block">.row.split4 <span class="extra-info">.unit</span></div></div>
+        <div class="unit"><div class="block">.row.split4 <span class="extra-info">.unit</span></div></div>
+        <div class="unit"><div class="block">.row.split4 <span class="extra-info">.unit</span></div></div>
+    </div>
+
+    <div class="row split5">
+        <div class="unit"><div class="block">.row.split5 <span class="extra-info">.unit</span></div></div>
+        <div class="unit"><div class="block">.row.split5 <span class="extra-info">.unit</span></div></div>
+        <div class="unit"><div class="block">.row.split5 <span class="extra-info">.unit</span></div></div>
+        <div class="unit"><div class="block">.row.split5 <span class="extra-info">.unit</span></div></div>
+        <div class="unit"><div class="block">.row.split5 <span class="extra-info">.unit</span></div></div>
 
     </div>
-</div>
 
-<div class="menu-top hide-on-mobiles">
-    <div class="row center">
+    <div class="row split6">
+        <div class="unit"><div class="block">.row.split6 <span class="extra-info">.unit</span></div></div>
+        <div class="unit"><div class="block">.row.split6 <span class="extra-info">.unit</span></div></div>
+        <div class="unit"><div class="block">.row.split6 <span class="extra-info">.unit</span></div></div>
+        <div class="unit"><div class="block">.row.split6 <span class="extra-info">.unit</span></div></div>
+        <div class="unit"><div class="block">.row.split6 <span class="extra-info">.unit</span></div></div>
+        <div class="unit"><div class="block">.row.split6 <span class="extra-info">.unit</span></div></div>
+    </div>
 
+    <div class="row split4 one-column-phones">
         <div class="unit">
+            <div class="block">
+                <span class="extra-info">.row.split4</span>.one-column-phones <span class="extra-info">.unit</span>
+            </div>
+        </div>
+        <div class="unit">
+            <div class="block">
+                <span class="extra-info">.row.split4</span>.one-column-phones <span class="extra-info">.unit</span>
+            </div>
+        </div>
+        <div class="unit">
+            <div class="block">
+                <span class="extra-info">.row.split4</span>.one-column-phones <span class="extra-info">.unit</span>
+            </div>
+        </div>
+        <div class="unit">
+            <div class="block">
+                <span class="extra-info">.row.split4</span>.one-column-phones <span class="extra-info">.unit</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="unit">
+            <h4 class="subtitle-chapter">Gridception</h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="unit u-25">
+            <div class="block"><span class="extra-info">.unit</span>.u-25</div>
+        </div>
+        <div class="unit u-75 nested">
+            <div class="row">
+                <div class="unit u-25"><div class="block"><span class="extra-info">.unit.u-25</span></div></div>
+                <div class="unit u-25"><div class="block"><span class="extra-info">.unit</span></div></div>
+                <div class="unit u-25"><div class="block"><span class="extra-info">.unit</span></div></div>
+                <div class="unit u-25"><div class="block"><span class="extra-info">.unit</span></div></div>
+                <div class="unit u-25"><div class="block"><span class="extra-info">.unit</span></div></div>
+                <div class="unit u-75"><div class="block"><span class="extra-info">.unit</span></div></div>
+                <div class="unit u-50"><div class="block"><span class="extra-info">.unit</span></div></div>
+                <div class="unit u-50"><div class="block"><span class="extra-info">.unit</span></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="unit">
+            <h4 class="subtitle-chapter">Gridception with a split</h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="unit u-25">
+            <div class="block"><span class="extra-info">.unit</span>.u-25</div>
+        </div>
+        <div class="unit u-75 nested">
+            <div class="row split3">
+                <div class="unit"><div class="block"><span class="extra-info">.unit</span></div></div>
+                <div class="unit"><div class="block"><span class="extra-info">.unit</span></div></div>
+                <div class="unit"><div class="block"><span class="extra-info">.unit</span></div></div>
+                <div class="unit"><div class="block"><span class="extra-info">.unit</span></div></div>
+                <div class="unit"><div class="block"><span class="extra-info">.unit</span></div></div>
+                <div class="unit"><div class="block"><span class="extra-info">.unit</span></div></div>
+                <div class="unit"><div class="block"><span class="extra-info">.unit</span></div></div>
+                <div class="unit"><div class="block"><span class="extra-info">.unit</span></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="unit">
+            <h3 id="play-with-grid" class="title-chapter">Play with the Grid</h3>
+            <p></p>
+        </div>
+    </div>
+
+    <div class="row justify">
+        <div class="unit tags">
             <ul class="menu-list">
-
-                <li>
-                    <a href="#basic-grid">basic grid</a>
-                </li>
-
-                <li>
-                   <a href="#waffle-grid">waffle grid</a>
-                </li>
-
-                <li><a href="#gridception">gridceptions</a></li>
-
-                <li>
-                    <a href="#justify">justify</a>
-                </li>
-
-                <li>
-                    <a href="#responsive">responsive utilities</a>
-                </li>
-
+                <li class="title-menu"><i class="fa fa-tags"></i> Pick a Dish!</li>
+                <li class="dish"><i class="fa fa-close"></i> Know-it-all Girl Head</li>
+                <li class="dish"><i class="fa fa-close"></i> Hairy Legs</li>
+                <li class="dish"><i class="fa fa-close"></i> Guilty Guy Head</li>
+                <li class="dish"><i class="fa fa-close"></i> Macho Arms</li>
+                <li class="dish"><i class="fa fa-close"></i> Smelly Feet</li>
             </ul>
         </div>
-
-    </div>
-</div>
-
-    <div class="demo">
-
-        <div class="row center">
-            <div class="unit">
-                <h3 id="basic-grid">The Basic Grid</h3>
-            </div>
-        </div>
-
-        <div class="row">
-
-            <div class="unit">
-                <div class="block">unit</div>
-            </div>
-
-            <div class="unit u-50">
-                <div class="block">unit
-                    <span class="size">1/2</span>
-                </div>
-            </div>
-
-            <div class="unit u-50">
-                <div class="block">unit <span class="size">1/2</span>
-                </div>
-            </div>
-
-            <div class="unit u-25">
-                <div class="block">unit <span class="size">1/4</span>
-                </div>
-            </div>
-
-            <div class="unit u-50">
-                <div class="block">unit <span class="size">1/2</span>
-                </div>
-            </div>
-
-            <div class="unit u-25">
-                <div class="block">unit <span class="size">1/4</span>
-                </div>
-            </div>
-
-            <div class="unit u-33">
-                <div class="block">unit <span class="size">1/3</span>
-                </div>
-            </div>
-
-            <div class="unit u-33">
-                <div class="block">unit <span class="size">1/3</span>
-                </div>
-            </div>
-
-            <div class="unit u-33">
-                <div class="block">unit <span class="size">1/3</span>
-                </div>
-            </div>
-
-            <div class="unit u-33">
-                <div class="block">unit <span class="size">1/3</span>
-                </div>
-            </div>
-
-            <div class="unit u-66">
-                <div class="block">unit <span class="size">2/3</span>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row center">
-            <div class="unit">
-                <h3 id="waffle-grid">The Waffle Grid</h3>
-            </div>
-        </div>
-
         <div class="unit">
-            <p class="block intro">Split in 3</p>
+            <a href="mailto:poferopuffo@gmail.com" class="email">Complain with the Owner</a>
         </div>
-
-        <div class="row split3">
-
-            <div class="unit">
-                <div class="block">split3 <span class="size">1/3</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split3 <span class="size">1/3</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split3 <span class="size">1/3</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split3 <span class="size">1/3</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split3 <span class="size">1/3</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split3 <span class="size">1/3</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="unit">
-            <p class="block intro">Split in 4</p>
-        </div>
-
-        <div class="row split4">
-
-            <div class="unit">
-                <div class="block">split4 <span class="size">1/4</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split4 <span class="size">1/4</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split4 <span class="size">1/4</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split4 <span class="size">1/4</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split4 <span class="size">1/4</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split4 <span class="size">1/4</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split4 <span class="size">1/4</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split4 <span class="size">1/4</span>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="unit">
-            <p class="block intro">Split in 5</p>
-        </div>
-
-        <div class="row split5">
-            <div class="unit">
-                <div class="block">split5 <span class="size">1/5</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split5 <span class="size">1/5</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split5 <span class="size">1/5</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split5 <span class="size">1/5</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split5 <span class="size">1/5</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split5 <span class="size">1/5</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split5 <span class="size">1/5</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split5 <span class="size">1/5</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split5 <span class="size">1/5</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split5 <span class="size">1/5</span>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="unit">
-            <p class="block intro">Split in 6</p>
-        </div>
-
-        <div class="row split6">
-
-            <div class="unit">
-                <div class="block">split6 <span class="size">1/6</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split6 <span class="size">1/6</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split6 <span class="size">1/6</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split6 <span class="size">1/6</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split6 <span class="size">1/6</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split6 <span class="size">1/6</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split6 <span class="size">1/6</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split6 <span class="size">1/6</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split6 <span class="size">1/6</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split6 <span class="size">1/6</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split6 <span class="size">1/6</span>
-                </div>
-            </div>
-
-            <div class="unit">
-                <div class="block">split6 <span class="size">1/6</span>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row center">
-
-            <div class="unit">
-                <h3 id="gridception">Gridceptions</h3>
-            </div>
-
-            <div class="unit">
-                <p class="block intro">1/3 + 2/3 split in 4</p>
-            </div>
-
-            <div class="unit u-33">
-                <div class="block">unit <span class="size">1/3</span>
-                </div>
-            </div>
-
-            <div class="unit u-66 parent">
-
-                <div class="row split4">
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="unit">
-                <p class="block intro">1/2 + 1/2 split in 3</p>
-            </div>
-
-            <div class="unit u-50">
-                <div class="block">unit <span class="size">1/3</span>
-                </div>
-            </div>
-
-            <div class="unit u-50 parent">
-
-                <div class="row split3">
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="unit">
-                <p class="block intro">1/4 + 1/2 split in 3 + 1/4</p>
-            </div>
-
-            <div class="unit u-25">
-                <div class="block">unit <span class="size">1/4</span>
-                </div>
-            </div>
-
-            <div class="unit u-50 parent">
-
-                <div class="row split3">
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                    <div class="unit">
-                        <div class="block">^_^</div>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="unit u-25">
-                <div class="block">unit <span class="size">1/4</span>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row center">
-            <div class="unit">
-                <h3 id="justify">Justify all the things!!!</h3>
-            </div>
-        </div>
-
-        <div class="row justify show-on-tablets">
-
-            <div class="unit">
-                <button class="button-green">eat me!</button>
-            </div>
-
-            <div class="unit">
-                <button>panza cream</button>
-            </div>
-
-            <div class="unit">
-                <button>awesome polpetta</button>
-            </div>
-
-            <div class="unit">
-                <button>homemade pirofila</button>
-            </div>
-
-            <div class="unit">
-                <button>spicy lasagna</button>
-            </div>
-
-            <div class="unit">
-                <button>extra topping</button>
-            </div>
-
-        </div>
-
-        <div class="row">
-            <div class="unit">
-                <p class="block intro">Easy set up for navs!</p>
-            </div>
-        </div>
-
-        <div class="row justify">
-
-            <div class="unit">
-                <button>previous</button>
-            </div>
-
-            <div class="unit">
-                <button class="button-green">^_^</button>
-            </div>
-
-            <div class="unit">
-                <button>following</button>
-            </div>
-
-        </div>
-
-        <div class="row center">
-            <div class="unit">
-                <h3 id="responsive">magically responsive classes</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="unit no-desktop">
-                <div class="block">no-desktop juicy!</div>
-            </div>
-            <div class="unit only-desktop">
-                <div class="block">only-desktop lecker!</div>
-            </div>
-            <div class="unit no-phone">
-                <div class="block">no-phone sneaky!</div>
-            </div>
-            <div class="unit only-phone">
-                <div class="block">only-phone yummy!</div>
-            </div>
-        </div>
-
-        <div class="row center">
-            <div class="unit">
-                <h3 id="experimental">Experimental Grids</h3>
-            </div>
-        </div>
-
-        <div class="row three-to-one">
-            <div class="unit">
-                <div class="block">⊂(^(工)^)⊃</div>
-            </div>
-            <div class="unit">
-                <div class="block">⊂(^(工)^)⊃</div>
-            </div>
-            <div class="unit">
-                <div class="block">⊂(^(工)^)⊃</div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="unit u-50 single-column">
-                <div class="block">SINGLE COLUMN</div>
-            </div>
-        </div>
-
     </div>
 
-<footer>
-    <div class="row center">
-        <ul class="unit menu-list">
-            <li>Waffle by <a href="http://twitter.com/scintillaluz">scintillaluz</a></li>
-        </ul>
+    <div class="row cannibal-dishes">
+        <div class="unit nested navigation">
+            <div class="row justify">
+                <div class="unit">
+                    <div class="nav left">
+                        <i class="fa fa-angle-left"></i>
+                    </div>
+                </div>
+                <div class="unit">
+                    <div class="nav right">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="unit nested">
+            <div class="row split6 img-container">
+                <div class="unit"><a href=""><img src="img/01-girl-head.jpg" alt=""></a></div>
+                <div class="unit"><a href=""><img src="img/05-guy-legs.jpg" alt=""></a></div>
+                <div class="unit"><a href=""><img src="img/03-girl-arms.jpg" alt=""></a></div>
+                <div class="unit"><a href=""><img src="img/02-guy-head.jpg" alt=""></a></div>
+                <div class="unit"><a href=""><img src="img/04-guy-arms.jpg" alt=""></a></div>
+                <div class="unit"><a href=""><img src="img/06-girl-legs.jpg" alt=""></a></div>
+                <div class="unit"><a href=""><img src="img/04-guy-arms.jpg" alt=""></a></div>
+                <div class="unit"><a href=""><img src="img/06-girl-legs.jpg" alt=""></a></div>
+                <div class="unit"><a href=""><img src="img/03-girl-arms.jpg" alt=""></a></div>
+                <div class="unit"><a href=""><img src="img/02-guy-head.jpg" alt=""></a></div>
+                <div class="unit"><a href=""><img src="img/01-girl-head.jpg" alt=""></a></div>
+                <div class="unit"><a href=""><img src="img/05-guy-legs.jpg" alt=""></a></div>
+            </div>
+        </div>
     </div>
-</footer>
 
-</body>
-</html>
+    <div class="row">
+        <div class="unit">
+            <h3 id="waffle-in-production" class="title-chapter">Waffle in Production</h3>
+            <p></p>
+        </div>
+    </div>
+
+    <div class="row no-wrap center acknowledgements">
+        <div class="unit">
+            <h3 class="title-thanks">Thanks!</h3>
+            <p>If I was able to build and publish Waffle, is also because I endlessly annoyed some very clever people–and they annoyed me back. </br>Many thanks to <a href="https://twitter.com/vrde">Vrde</a>, <a href="https://twitter.com/ilwcss">Marv</a> and <a href="https://twitter.com/danilapellicani">Danila</a></p>
+        </div>
+    </div>
+
+    <footer class="row no-wrap">
+        <div class="unit nested">
+            <div class="row justify">
+                <div class="unit">
+                    <p>2014 <a href="https://twitter.com/scintillaluz">Scintillaluz</a> under <a href="">MIT</a> Licence</p>
+                </div>
+                <div class="unit">
+                    <p>No guys or girls were armed to build this framework. Not even the assholes.</p>
+                </div>
+            </div>
+        </div>
+    </footer>

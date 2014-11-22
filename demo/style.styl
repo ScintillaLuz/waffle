@@ -2,186 +2,232 @@
 // for Waffle
 // a CSS inline-block framework
 
-@import url("//fonts.googleapis.com/css?family=Kavoon")
+@import url("//fonts.googleapis.com/css?family=Luckiest+Guy")
 @import url("//fonts.googleapis.com/css?family=Open\+Sans:400,300,600,700,800")
 @import url("//fonts.googleapis.com/css?family=Inconsolata:400,700")
 
 @import '../stylus/utils'
 
-$color_bg = #F0EFED
-$color_main = #3F3529
-$color_two = #AEE4DC
-$color_three = #DCBEDD
-$color_blocks = #DDD9D1
-$color_separators = #EDD796
+
+// Primary Colors
+$color_main = #43423F
+$color_bg = #F6F4EE
+$color_red = #DF4B4B
+$color_blue = #4F97DA
+
+// Secondary Colors
+$color_secondary = lighten($color_main, 25%)
+$color_bg_button = shade($color_bg, 6%)
+$color_border_button = shade($color_bg, 15%)
+$color_text_button = shade($color_bg, 45%)
+
+// Rounded Corners
+$rounded_corners = 4px
+
+// Box Shadow Color
+$box_shadow_color = #E5E2DA
+
 
 body
     color $color_main
-    background-color $color_bg
     font-family "Open Sans", Helvetica, sans-serif
     text-rendering optimizeLegibility
     -webkit-font-smoothing antialiased
     -moz-osx-font-smoothing grayscale
 
     a
+        border-bottom 1px solid transparent
+        color $color_red
+
         text-decoration none
-        color darken($color_two, 50%)
 
-        transition(color 0.5s ease)
-
-        &:hover
-            color darken($color_three, 30%)
-
-.banner-top
-    background-color $color_main
-    width $full
-
-    h1
-        font-family "Kavoon", cursive
-        font-weight 400
-        font-size 7em
-        color $color_bg
-
-        margin 0.4em 0 0 0
-
-        @media screen and (max-width: 640px)
-            font-size 4em
-
-    h2
-        color $color_bg
-        font-weight 300
-        font-size 2em
-
-        margin 0.5em 0 2em 0
-
-        @media screen and (max-width: 640px)
-            font-weight 400
-            font-size 1.3em
-
-        a
-            color darken($color_two, 15%)
-
-            &:hover
-                color darken($color_three, 15%)
-
-.menu-top
-    background-color $color_two
-
-    ul
-        li
-            font-weight 600
-            text-transform uppercase
-            padding 0.5em
-
-            a
-                padding 0.5em
-
-                &:hover
-                    background-color darken($color_two, 40%)
-                    border-radius 3px
-                    color white
-
-.main-wrap
-    @media screen and (max-width: 1024px)
-        padding 0.85em
-
-.demo
-
-    h3
-        font-weight 400
-        font-size 1.3em
-        text-transform uppercase
-
-        margin 3.2em 0 0.8em 0
-
-    h2,
-    h3
-        line-height 1.6em
-
-        @media screen and (max-width: 640px)
-            font-weight 400
-            font-size 1.2em
-
-    .block
-        background-color $color_blocks
-        padding 35px
-        border-radius 5px
-
-        font-family "Inconsolata", monospaced
-        font-size 1.2em
-        text-align center
-
-        transition(all 0.5s ease)
+        transition(all 0.3s ease)
 
         &:hover
-            background-color $color_two
-            cursor pointer
+            border-bottom 1px solid @color
 
-    .size
-        color darken($color_two, 50%)
 
-    .intro
+// Button Styles
+.button
+    padding 0.9em 1em
+
+    border-radius $rounded_corners
+    border 1px solid transparent
+
+    background-color $color_bg_button
+    color $color_text_button
+
+    font-size 0.8em
+    font-weight 600
+    text-transform uppercase
+    letter-spacing 0.05em
+
+    transition(all 0.3s ease)
+
+    &:hover
+        box-shadow 0px 4px 4px -4px $box_shadow_color
+        border 1px solid $color_border_button
+
+        color shade($color_text_button, 25%)
+        background-color shade($color_bg_button, 6%)
+
+    &:active
+        box-shadow inset 0px 0px 3px 2px shade($color_bg_button, 12%)
+
+
+
+// Blocks Styles
+
+.block
+    background-color $color_bg
+    padding 35px
+
+    outline 1px dashed $color_border_button
+
+    font-family "Inconsolata", monospaced
+    font-size 1em
+    text-align center
+
+    transition(all 0.5s ease)
+
+    &:hover
         background-color $color_two
-
-        &:hover
-            background-color $color_separators
-
-    button
-        background-color $color_separators
-        display inline-block
-        padding 10px 20px
-        border-radius 5px
-        border none
-
-        font-weight 400
-        font-size 0.85em
-        color lighten($color_main, 15%)
-        text-transform uppercase
         cursor pointer
 
-        &:hover
-            background-color darken($color_separators, 10%)
-            color $color_main
+    .extra-info
+        color $color_text_button
 
-        .fa
-            font-size 2em
+// Page Style
 
-    .button-green
-        background-color $color_two
-        color darken($color_two, 55%)
+.intro
+    background-color $color_bg
 
-        &:hover
-            background-color darken($color_two, 10%)
-            color darken($color_two, 75%)
+    img
+        margin 3em 0 0 0
 
-    .hide-on-tablets .block
-        background-color $color_two
+    h1
+        margin 0.5em 0 0 0
 
-        &:hover
-            background-color darken($color_two, 15%)
+        font-family 'Luckiest Guy', Georgia, serif
+        font-size 6.5em
+        font-weight normal
 
-    .show-on-tablets .block
+    h2
+        margin 0.5em 0 0 0
 
-        &:hover
-            background-color darken($color_blocks, 15%)
+        font-size 1.5em
+        font-weight 400
 
-    .hide-on-mobiles .block
-        background-color $color_separators
+    p
+        color $color_secondary
+        font-size 1.1em
+        font-weight 400
 
-        &:hover
-            background-color darken($color_separators, 15%)
+    .menu
+        margin 2em 0 3em 0
 
-    .show-on-mobiles .block
-        background-color $color_three
+.title-chapter
+.subtitle-chapter
+    text-align center
 
-        &:hover
-            background-color darken($color_three, 15%)
+.title-chapter
+    font-size 2.4em
+    font-weight 300
 
+.subtitle-chapter
+    font-size 1.1em
+    font-weight 400
+    text-transform uppercase
+
+// Play with the Grid
+
+// Justify
+
+// Mixin for tags
+tags(color = shade($color_blue, 30%), bg_color = lighten($color_blue, 70%))
+    color color
+    background-color bg_color
+
+    padding 0.5em 0.8em
+    border-radius 2px
+
+    font-size 0.8em
+    font-weight 600
+    text-transform uppercase
+    letter-spacing 0.05em
+
+    &:hover
+        cursor pointer
+
+.tags
+    .title-menu
+        tags(shade($color_bg, 40%), shade($color_bg, 5%))
+
+    .dish
+        tags()
+
+    .email
+        tags(shade($color_red, 20%), lighten($color_red, 70%))
+
+
+.cannibal-dishes
+    position relative
+
+    .img-container
+
+        a
+            opacity 0.5
+            border-bottom none
+
+            transition(all 0.3s ease)
+
+            &:hover
+                opacity 1
+
+            img
+                max-width 100%
+
+    .navigation
+        position absolute
+        z-index 10
+        top 38%
+
+        pointer-events none
+
+        .nav
+
+            .fa
+                color $color_main
+
+                font-size 4em
+                text-align center
+                text-shadow 1px 2px 4px rgba($color_main, 0.3)
+
+                opacity 0.9
+
+        .nav.left
+            margin-left -0.5em
+
+        .nav.right
+            margin-right -0.5em
+
+// Thanks
+
+.acknowledgements
+    background-color $color_bg
+
+    .title-thanks
+        font-family 'Luckiest Guy', Georgia, serif
+        font-weight normal
+        font-size 6em
+
+// Footer
 footer
-    margin 3em 0 0 0
-    background-color $color_blocks
+    background-color $color_red
 
-    ul
-        li
-            padding 0.2em
-            font-weight 600
+    p
+        padding 1em 0
+        color $color_bg
+
+        font-size 0.85em
+        font-weight 600
