@@ -18,7 +18,7 @@
             <img src="img/bodyparts.jpg" alt="intro-img">
             <h1>Waffle</h1>
             <h2>The first cannibal (and lightweight) CSS framework based on inline-block</h2>
-            <p>Built by <a href="https://twitter.com/scintillaluz">@Scintillaluz</a> please fork me on <a href="">Github</a></p>
+            <p>Built with sweat and tears by <a href="https://twitter.com/scintillaluz">@Scintillaluz</a></p>
         </div>
         <div class="unit menu">
             <a href="#basic-grid" class="button">The Basic Grid</a>
@@ -28,17 +28,26 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="unit">
+    <div class="row single-column">
+        <div class="unit u-75">
             <h3 class="title-chapter">About Waffle</h3>
-            <p></p>
+            <p class="description">Waffle is a simple, fully responsive and lightweight CSS framework built in Stylus, for building layouts without the hassle of clearing floats. There are two types of grids in Waffle, both sharing the same approach: horizontal blocks are called <code>.row</code>, and each <code>.row</code> can contain a multiple <code>.unit</code> blocks with diverse widths. By default each <code>.row</code> wrap itself on a maximum width defined by a <code>$width_layout</code> variable, here of 1180px. A <code>.wider</code> class applied to the <code>body</code> expand the maximum to 1600px for screens larger than 1800px. Once installed you can change these variables as you wish.</p>
+
+            <p class="description">Waffle is based on <code>display: inline-block</code> so it is not supported by IE7. Also, as you may know, <code>inline-block</code> have a problem of </p>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row center">
         <div class="unit">
+            <a href="" class="button btn-red">view on github</a>
+            <a href="" class="button btn-blue">download .zip</a>
+        </div>
+    </div>
+
+    <div class="row single-column">
+        <div class="unit u-75">
             <h3 id="basic-grid" class="title-chapter">The Basic Grid</h3>
-            <p></p>
+            <p class="description">This grid is directly inspired and expands <a href="http://cobyism.com/gridism/">Gridism</a> by Cobyism. I too believe that columns are counter-intuitive when designing an online page, so I borrowed this approach and worked with percentages. I've added a <code>.single-column</code> class for the <code>row</code> to use the units as single centered columns; it may be a bit "dirty" but I found out it's a good substitute for narrowing columns with padding. Plus, I make it stack nicely on mobile.</p>
         </div>
     </div>
 
@@ -198,7 +207,7 @@
         </div>
     </div>
 
-    <div class="row cannibal-dishes">
+    <div class="row cannibal-dishes only-desktop">
         <div class="unit nested navigation">
             <div class="row justify">
                 <div class="unit">
@@ -234,14 +243,24 @@
     <div class="row">
         <div class="unit">
             <h3 id="waffle-in-production" class="title-chapter">Waffle in Production</h3>
-            <p></p>
+            <p class="description"></p>
         </div>
     </div>
 
-    <div class="row no-wrap center acknowledgements">
+    <div class="row no-wrap center fork">
         <div class="unit">
-            <h3 class="title-thanks">Thanks!</h3>
-            <p>If I was able to build and publish Waffle, is also because I endlessly annoyed some very clever people–and they annoyed me back. </br>Many thanks to <a href="https://twitter.com/vrde">Vrde</a>, <a href="https://twitter.com/ilwcss">Marv</a> and <a href="https://twitter.com/danilapellicani">Danila</a></p>
+            <h3 class="title">Fork me!</h3>
+        </div>
+        <div class="unit nested">
+            <div class="row single-column">
+                <div class="unit u-75">
+                    <p class="description">I'm eager to receive <strong>pull requests</strong> and improve Waffle. It would actually be awesome to have Less and Sass versions. Waffle is open source and released under a MIT Licence.</p>
+                </div>
+            </div>
+        </div>
+        <div class="unit call-to-fork">
+            <a href="" class="button btn-red">view on github</a>
+            <a href="" class="button btn-blue">download .zip</a>
         </div>
     </div>
 
@@ -249,11 +268,13 @@
         <div class="unit nested">
             <div class="row justify">
                 <div class="unit">
-                    <p>2014 <a href="https://twitter.com/scintillaluz">Scintillaluz</a> under <a href="">MIT</a> Licence</p>
+                    <p>2014 <a href="https://twitter.com/scintillaluz">Scintillaluz</a> with many thanks to <a href="https://twitter.com/vrde">Vrde</a>, <a href="https://twitter.com/ilwcss">Marv</a> and <a href="https://twitter.com/danilapellicani">Danila</a></p>
                 </div>
                 <div class="unit">
-                    <p>No guys or girls were armed to build this framework. Not even the assholes.</p>
+                    <p>No guys or girls were armed to build this framework.</p>
                 </div>
             </div>
         </div>
     </footer>
+</body>
+</html>

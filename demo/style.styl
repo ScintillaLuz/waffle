@@ -14,6 +14,10 @@ $color_main = #43423F
 $color_bg = #F6F4EE
 $color_red = #DF4B4B
 $color_blue = #4F97DA
+$color_light_blue = lighten($color_blue, 70%)
+$color_light_red = lighten($color_red, 70%)
+$color_dark_blue = shade($color_blue, 30%)
+$color_dark_red = desaturate($color_red, 10%)
 
 // Secondary Colors
 $color_secondary = lighten($color_main, 25%)
@@ -25,11 +29,12 @@ $color_text_button = shade($color_bg, 45%)
 $rounded_corners = 4px
 
 // Box Shadow Color
-$box_shadow_color = #E5E2DA
+$box_shadow_color = rgba($color_secondary, 0.4)
 
 
 body
     color $color_main
+
     font-family "Open Sans", Helvetica, sans-serif
     text-rendering optimizeLegibility
     -webkit-font-smoothing antialiased
@@ -46,6 +51,31 @@ body
         &:hover
             border-bottom 1px solid @color
 
+code
+    padding 2px 3px
+    color $color_main
+    background-color $color_bg_button
+    border 1px solid $color_border_button
+    border-radius 2px
+
+    font-family 'Inconsolata', monospaced
+    font-size 0.95em
+
+// Mixin for tags
+tags(color = $color_dark_blue, bg_color = $color_light_blue)
+    color color
+    background-color bg_color
+
+    padding 0.5em 0.8em
+    border-radius 2px
+
+    font-size 0.8em
+    font-weight 600
+    text-transform uppercase
+    letter-spacing 0.05em
+
+    &:hover
+        cursor pointer
 
 // Button Styles
 .button
@@ -74,6 +104,45 @@ body
     &:active
         box-shadow inset 0px 0px 3px 2px shade($color_bg_button, 12%)
 
+.btn-light-blue
+    @extend .button
+    background-color $color_light_blue
+    color $color_dark_blue
+
+    &:hover
+        background-color lighten($color_blue, 50%)
+        border 1px solid lighten($color_blue, 30%)
+        color @color
+
+.btn-light-red
+    @extend .button
+    background-color $color_light_red
+    color $color_dark_red
+
+    &:hover
+        background-color lighten($color_red, 60%)
+        border 1px solid lighten($color_red, 40%)
+        color @color
+
+.btn-blue
+    @extend .button
+    background-color $color_blue
+    color white
+
+    &:hover
+        background-color darken($color_blue, 10%)
+        border 1px solid darken($color_blue, 20%)
+        color @color
+
+.btn-red
+    @extend .button
+    background-color $color_red
+    color white
+
+    &:hover
+        background-color darken($color_red, 10%)
+        border 1px solid darken($color_red, 20%)
+        color @color
 
 
 // Blocks Styles
@@ -96,6 +165,7 @@ body
 
     .extra-info
         color $color_text_button
+
 
 // Page Style
 
@@ -131,6 +201,7 @@ body
     text-align center
 
 .title-chapter
+    margin 1.5em 0 0 0
     font-size 2.4em
     font-weight 300
 
@@ -139,25 +210,15 @@ body
     font-weight 400
     text-transform uppercase
 
+.description
+    margin 1em 0 0 0
+    color $color_secondary
+    font-size 1.15em
+    line-height 1.6em
+
 // Play with the Grid
 
 // Justify
-
-// Mixin for tags
-tags(color = shade($color_blue, 30%), bg_color = lighten($color_blue, 70%))
-    color color
-    background-color bg_color
-
-    padding 0.5em 0.8em
-    border-radius 2px
-
-    font-size 0.8em
-    font-weight 600
-    text-transform uppercase
-    letter-spacing 0.05em
-
-    &:hover
-        cursor pointer
 
 .tags
     .title-menu
@@ -213,13 +274,21 @@ tags(color = shade($color_blue, 30%), bg_color = lighten($color_blue, 70%))
 
 // Thanks
 
-.acknowledgements
+.fork
     background-color $color_bg
 
-    .title-thanks
+    .title
+        margin 1em 0 0 0
+
         font-family 'Luckiest Guy', Georgia, serif
         font-weight normal
         font-size 6em
+
+    .description
+        margin 0
+
+    .call-to-fork
+        margin 1.6em 0 5em 0
 
 // Footer
 footer
@@ -231,3 +300,8 @@ footer
 
         font-size 0.85em
         font-weight 600
+        letter-spacing 0.03em
+
+        a
+            color white
+            border-bottom 1px solid $color_bg
