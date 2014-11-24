@@ -1,0 +1,263 @@
+@import url("//fonts.googleapis.com/css?family=Luckiest+Guy");
+@import url("//fonts.googleapis.com/css?family=Open\+Sans:400,300,600,700,800");
+@import url("//fonts.googleapis.com/css?family=Inconsolata:400,700");
+body {
+  color: #43423f;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body a {
+  border-bottom: 1px solid transparent;
+  color: #df4b4b;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+body a:hover {
+  border-bottom: 1px solid #df4b4b;
+}
+code {
+  padding: 2px 3px;
+  color: #43423f;
+  background-color: #e7e5df;
+  border: 1px solid #d1cfca;
+  border-radius: 2px;
+  font-family: 'Inconsolata', monospaced;
+  font-size: 0.95em;
+}
+.button,
+.btn-light-blue,
+.btn-light-red,
+.btn-blue,
+.btn-red {
+  padding: 0.9em 1em;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background-color: #e7e5df;
+  color: #878682;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.button:hover,
+.btn-light-blue:hover,
+.btn-light-red:hover,
+.btn-blue:hover,
+.btn-red:hover {
+  box-shadow: 0px 4px 4px -4px rgba(116,114,109,0.4);
+  border: 1px solid #d1cfca;
+  color: #656461;
+  background-color: #d9d7d1;
+}
+.button:active,
+.btn-light-blue:active,
+.btn-light-red:active,
+.btn-blue:active,
+.btn-red:active {
+  box-shadow: inset 0px 0px 3px 2px #cbc9c4;
+}
+.btn-light-blue {
+  background-color: #cae0f4;
+  color: #376998;
+}
+.btn-light-blue:hover {
+  background-color: #a7cbec;
+  border: 1px solid #84b6e5;
+  color: #376998;
+}
+.btn-light-red {
+  background-color: #f5c9c9;
+  color: #d85252;
+}
+.btn-light-red:hover {
+  background-color: #f2b7b7;
+  border: 1px solid #ec9393;
+  color: #d85252;
+}
+.btn-blue {
+  background-color: #4f97da;
+  color: #fff;
+}
+.btn-blue:hover {
+  background-color: #3688d5;
+  border: 1px solid #297ac4;
+  color: #fff;
+}
+.btn-red {
+  background-color: #df4b4b;
+  color: #fff;
+}
+.btn-red:hover {
+  background-color: #db3232;
+  border: 1px solid #ca2424;
+  color: #fff;
+}
+.block {
+  background-color: #f6f4ee;
+  padding: 35px;
+  outline: 1px dashed #d1cfca;
+  font-family: "Inconsolata", monospaced;
+  font-size: 1em;
+  text-align: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.block:hover {
+  background-color: $color_two;
+  cursor: pointer;
+}
+.block .extra-info {
+  color: #878682;
+}
+.intro {
+  background-color: #f6f4ee;
+}
+.intro img {
+  margin: 3em 0 0 0;
+}
+.intro h1 {
+  margin: 0.5em 0 0 0;
+  font-family: 'Luckiest Guy', Georgia, serif;
+  font-size: 6.5em;
+  font-weight: normal;
+}
+.intro h2 {
+  margin: 0.5em 0 0 0;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+.intro p {
+  color: #74726d;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+.intro .menu {
+  margin: 2em 0 3em 0;
+}
+.title-chapter,
+.subtitle-chapter {
+  text-align: center;
+}
+.title-chapter {
+  margin: 1.5em 0 0 0;
+  font-size: 2.4em;
+  font-weight: 300;
+}
+.subtitle-chapter {
+  font-size: 1.1em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.description {
+  margin: 1em 0 0 0;
+  color: #74726d;
+  font-size: 1.15em;
+  line-height: 1.6em;
+}
+.tags .title-menu {
+  color: #93928e;
+  background-color: #e9e7e2;
+  padding: 0.5em 0.8em;
+  border-radius: 2px;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.tags .title-menu:hover {
+  cursor: pointer;
+}
+.tags .dish {
+  color: #376998;
+  background-color: #cae0f4;
+  padding: 0.5em 0.8em;
+  border-radius: 2px;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.tags .dish:hover {
+  cursor: pointer;
+}
+.tags .email {
+  color: #b23c3c;
+  background-color: #f5c9c9;
+  padding: 0.5em 0.8em;
+  border-radius: 2px;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.tags .email:hover {
+  cursor: pointer;
+}
+.cannibal-dishes {
+  position: relative;
+}
+.cannibal-dishes .img-container a {
+  opacity: 0.5;
+  border-bottom: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.cannibal-dishes .img-container a:hover {
+  opacity: 1;
+}
+.cannibal-dishes .img-container a img {
+  max-width: 100%;
+}
+.cannibal-dishes .navigation {
+  position: absolute;
+  z-index: 10;
+  top: 38%;
+  pointer-events: none;
+}
+.cannibal-dishes .navigation .nav .fa {
+  color: #43423f;
+  font-size: 4em;
+  text-align: center;
+  text-shadow: 1px 2px 4px rgba(67,66,63,0.3);
+  opacity: 0.9;
+}
+.cannibal-dishes .navigation .nav.left {
+  margin-left: -0.5em;
+}
+.cannibal-dishes .navigation .nav.right {
+  margin-right: -0.5em;
+}
+.fork {
+  background-color: #f6f4ee;
+}
+.fork .title {
+  margin: 1em 0 0 0;
+  font-family: 'Luckiest Guy', Georgia, serif;
+  font-weight: normal;
+  font-size: 6em;
+}
+.fork .description {
+  margin: 0;
+}
+.fork .call-to-fork {
+  margin: 1.6em 0 5em 0;
+}
+footer {
+  background-color: #df4b4b;
+}
+footer p {
+  padding: 1em 0;
+  color: #f6f4ee;
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+footer p a {
+  color: #fff;
+  border-bottom: 1px solid #f6f4ee;
+}
