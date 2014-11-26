@@ -34,6 +34,12 @@ body.wider
     vertical-align top
     font-size $type_size
 
+    @media screen and (max-width: 800px)
+        border $border_tablet solid transparent
+
+    @media screen and (max-width: 640px)
+        border $border_phone solid transparent
+
 // Basic Grid System
 
 // Define units
