@@ -1,6 +1,7 @@
 @import url("//fonts.googleapis.com/css?family=Luckiest+Guy");
 @import url("//fonts.googleapis.com/css?family=Open\+Sans:400,300,600,700,800");
 @import url("//fonts.googleapis.com/css?family=Inconsolata:400,700");
+@import url("//fonts.googleapis.com/css?family=Merriweather:400,400italic,300italic,300,700,700italic");
 body {
   color: #43423f;
   font-family: "Open Sans", Helvetica, sans-serif;
@@ -9,19 +10,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 body a {
-  border-bottom: 1px solid transparent;
   color: #df4b4b;
+  border-bottom: 1px solid #df4b4b;
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 body a:hover {
-  border-bottom: 1px solid #df4b4b;
+  color: #2c81d1;
+  border-bottom: 1px solid #2c81d1;
 }
 code {
   padding: 2px 3px;
   color: #43423f;
-  background-color: #e7e5df;
+  background-color: #f6f4ee;
   border: 1px solid #d1cfca;
   border-radius: 2px;
   font-family: 'Inconsolata', monospaced;
@@ -31,7 +33,8 @@ code {
 .btn-light-blue,
 .btn-light-red,
 .btn-blue,
-.btn-red {
+.btn-red,
+.btn-small {
   padding: 0.9em 1em;
   border-radius: 4px;
   border: 1px solid transparent;
@@ -48,7 +51,8 @@ code {
 .btn-light-blue:hover,
 .btn-light-red:hover,
 .btn-blue:hover,
-.btn-red:hover {
+.btn-red:hover,
+.btn-small:hover {
   box-shadow: 0px 4px 4px -4px rgba(116,114,109,0.4);
   border: 1px solid #d1cfca;
   color: #656461;
@@ -58,44 +62,66 @@ code {
 .btn-light-blue:active,
 .btn-light-red:active,
 .btn-blue:active,
-.btn-red:active {
+.btn-red:active,
+.btn-small:active {
   box-shadow: inset 0px 0px 3px 2px #cbc9c4;
+}
+@media screen and (max-width: 640px) {
+  .button,
+  .btn-light-blue,
+  .btn-light-red,
+  .btn-blue,
+  .btn-red,
+  .btn-small,
+.btn-light-blue,
+.btn-light-red,
+.btn-blue,
+.btn-red,
+.btn-small {
+    display: block;
+  }
 }
 .btn-light-blue {
   background-color: #cae0f4;
-  color: #376998;
+  color: #2f5a82;
 }
 .btn-light-blue:hover {
   background-color: #a7cbec;
   border: 1px solid #84b6e5;
-  color: #376998;
+  color: #2f5a82;
 }
 .btn-light-red {
-  background-color: #f5c9c9;
-  color: #d85252;
+  background-color: #f9dbdb;
+  color: #c84343;
 }
 .btn-light-red:hover {
-  background-color: #f2b7b7;
+  background-color: #f5c9c9;
   border: 1px solid #ec9393;
-  color: #d85252;
+  color: #c84343;
 }
 .btn-blue {
   background-color: #4f97da;
   color: #fff;
 }
 .btn-blue:hover {
-  background-color: #3688d5;
+  background-color: #61a1de;
   border: 1px solid #297ac4;
   color: #fff;
+  text-shadow: 1px 1px 4px rgba(79,151,218,0.8);
 }
 .btn-red {
   background-color: #df4b4b;
   color: #fff;
 }
 .btn-red:hover {
-  background-color: #db3232;
+  background-color: #e25d5d;
   border: 1px solid #ca2424;
   color: #fff;
+  text-shadow: 1px 1px 4px rgba(223,75,75,0.8);
+}
+.btn-small {
+  padding: 0.5em 0.8em;
+  font-size: 0.75em;
 }
 .block {
   background-color: #f6f4ee;
@@ -108,36 +134,17 @@ code {
   transition: all 0.5s ease;
 }
 .block:hover {
-  background-color: $color_two;
+  background-color: #cae0f4;
+  outline: 1px dashed #4f97da;
   cursor: pointer;
 }
 .block .extra-info {
   color: #878682;
 }
-.intro {
-  background-color: #f6f4ee;
-}
-.intro img {
-  margin: 3em 0 0 0;
-}
-.intro h1 {
-  margin: 0.5em 0 0 0;
-  font-family: 'Luckiest Guy', Georgia, serif;
-  font-size: 6.5em;
-  font-weight: normal;
-}
-.intro h2 {
-  margin: 0.5em 0 0 0;
-  font-size: 1.5em;
-  font-weight: 400;
-}
-.intro p {
-  color: #74726d;
-  font-size: 1.1em;
-  font-weight: 400;
-}
-.intro .menu {
-  margin: 2em 0 3em 0;
+@media screen and (max-width: 640px) {
+  body > .row {
+    padding: 0 1rem;
+  }
 }
 .title-chapter,
 .subtitle-chapter {
@@ -148,55 +155,93 @@ code {
   font-size: 2.4em;
   font-weight: 300;
 }
+@media screen and (max-width: 640px) {
+  .title-chapter {
+    font-size: 2em;
+  }
+}
 .subtitle-chapter {
   font-size: 1.1em;
   font-weight: 400;
   text-transform: uppercase;
 }
 .description {
-  margin: 1em 0 0 0;
-  color: #74726d;
-  font-size: 1.15em;
-  line-height: 1.6em;
+  margin: 2em 0;
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.9em;
 }
-.tags .title-menu {
-  color: #93928e;
-  background-color: #e9e7e2;
-  padding: 0.5em 0.8em;
-  border-radius: 2px;
-  font-size: 0.8em;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+@media screen and (max-width: 640px) {
+  .description {
+    font-size: 1em;
+  }
 }
-.tags .title-menu:hover {
-  cursor: pointer;
+.description a {
+  font-weight: 700;
 }
-.tags .dish {
-  color: #376998;
-  background-color: #cae0f4;
-  padding: 0.5em 0.8em;
-  border-radius: 2px;
-  font-size: 0.8em;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+.intro {
+  background-color: #f6f4ee;
 }
-.tags .dish:hover {
-  cursor: pointer;
+.intro img {
+  max-width: 100%;
+  margin: 3em 0 0 0;
 }
-.tags .email {
-  color: #b23c3c;
-  background-color: #f5c9c9;
-  padding: 0.5em 0.8em;
-  border-radius: 2px;
-  font-size: 0.8em;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+.intro h1 {
+  margin: 0.5em 0 0 0;
+  font-family: 'Luckiest Guy', Georgia, serif;
+  font-size: 6.5em;
+  font-weight: normal;
 }
-.tags .email:hover {
-  cursor: pointer;
+@media screen and (max-width: 640px) {
+  .intro h1 {
+    margin: 0.8em 0 0 0;
+    font-size: 4em;
+  }
+}
+.intro h2 {
+  margin: 0.5em 0 0 0;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+@media screen and (max-width: 640px) {
+  .intro h2 {
+    padding: 0 1.2em;
+    line-height: 1.6em;
+    font-size: 1em;
+  }
+}
+.intro p {
+  color: #918f89;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+@media screen and (max-width: 640px) {
+  .intro p {
+    padding: 0 1em;
+    font-size: 0.9em;
+  }
+}
+.intro .menu {
+  margin: 2em 0 3em 0;
+}
+@media screen and (max-width: 640px) {
+  .intro .menu {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  .intro .menu .button {
+    margin: 0 0 0.7em 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  .about-waffle .button {
+    margin-bottom: 0.7em;
+  }
+}
+.tags {
+  margin: 1em 0 2em 0;
 }
 .cannibal-dishes {
   position: relative;
@@ -235,29 +280,67 @@ code {
 .fork {
   background-color: #f6f4ee;
 }
+@media screen and (max-width: 640px) {
+  .fork .unit {
+    padding: 0 1em;
+  }
+}
 .fork .title {
   margin: 1em 0 0 0;
   font-family: 'Luckiest Guy', Georgia, serif;
   font-weight: normal;
   font-size: 6em;
 }
+@media screen and (max-width: 640px) {
+  .fork .title {
+    font-size: 4em;
+  }
+}
 .fork .description {
   margin: 0;
 }
-.fork .call-to-fork {
+.fork .get-waffle {
   margin: 1.6em 0 5em 0;
+}
+@media screen and (max-width: 640px) {
+  .fork .get-waffle {
+    margin: 1.6em 0 1em 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  .fork .button {
+    margin-bottom: 0.7em;
+  }
 }
 footer {
   background-color: #df4b4b;
 }
-footer p {
-  padding: 1em 0;
-  color: #f6f4ee;
-  font-size: 0.85em;
-  font-weight: 600;
+footer .content {
+  padding: 3rem 0;
+}
+footer .content p {
+  margin: 0;
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 700;
   letter-spacing: 0.03em;
 }
-footer p a {
+footer .content p a {
   color: #fff;
-  border-bottom: 1px solid #f6f4ee;
+  border-bottom: 1px solid #e77878;
+}
+footer .content p a:hover {
+  border-bottom: 1px solid #fff;
+}
+@media screen and (max-width: 640px) {
+  footer .content p {
+    padding: 0 1em;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 640px) {
+  footer .content {
+    padding: 2rem 0;
+  }
 }
