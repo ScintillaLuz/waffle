@@ -1,3 +1,7 @@
+## demo and instructions
+
+Check the demo page here: http://scintillaluz.github.io/waffle/
+
 ## start developing
 
 **1. Install stylus npm module**

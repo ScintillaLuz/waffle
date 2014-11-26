@@ -5,31 +5,30 @@
 @import url("//fonts.googleapis.com/css?family=Luckiest+Guy")
 @import url("//fonts.googleapis.com/css?family=Open\+Sans:400,300,600,700,800")
 @import url("//fonts.googleapis.com/css?family=Inconsolata:400,700")
+@import url("//fonts.googleapis.com/css?family=Merriweather:400,400italic,300italic,300,700,700italic")
 
 @import '../stylus/utils'
 
 
-// Primary Colors
+// Colors
 $color_main = #43423F
+$color_secondary = lighten($color_main, 25%)
 $color_bg = #F6F4EE
 $color_red = #DF4B4B
 $color_blue = #4F97DA
 $color_light_blue = lighten($color_blue, 70%)
-$color_light_red = lighten($color_red, 70%)
-$color_dark_blue = shade($color_blue, 30%)
-$color_dark_red = desaturate($color_red, 10%)
+$color_light_red = lighten($color_red, 80%)
+$color_dark_blue = shade($color_blue, 40%)
+$color_dark_red = shade($color_red, 10%)
 
-// Secondary Colors
-$color_secondary = lighten($color_main, 25%)
+// Buttons Colors
 $color_bg_button = shade($color_bg, 6%)
-$color_border_button = shade($color_bg, 15%)
 $color_text_button = shade($color_bg, 45%)
+$color_border_button = shade($color_bg, 15%)
+$box_shadow_color = rgba($color_secondary, 0.4)
 
 // Rounded Corners
 $rounded_corners = 4px
-
-// Box Shadow Color
-$box_shadow_color = rgba($color_secondary, 0.4)
 
 
 body
@@ -41,41 +40,26 @@ body
     -moz-osx-font-smoothing grayscale
 
     a
-        border-bottom 1px solid transparent
         color $color_red
+        border-bottom 1px solid @color
 
         text-decoration none
 
         transition(all 0.3s ease)
 
         &:hover
+            color darken($color_blue, 15%)
             border-bottom 1px solid @color
 
 code
     padding 2px 3px
     color $color_main
-    background-color $color_bg_button
-    border 1px solid $color_border_button
+    background-color $color_bg
+    border 1px solid shade($color_bg, 15%)
     border-radius 2px
 
     font-family 'Inconsolata', monospaced
     font-size 0.95em
-
-// Mixin for tags
-tags(color = $color_dark_blue, bg_color = $color_light_blue)
-    color color
-    background-color bg_color
-
-    padding 0.5em 0.8em
-    border-radius 2px
-
-    font-size 0.8em
-    font-weight 600
-    text-transform uppercase
-    letter-spacing 0.05em
-
-    &:hover
-        cursor pointer
 
 // Button Styles
 .button
@@ -104,6 +88,9 @@ tags(color = $color_dark_blue, bg_color = $color_light_blue)
     &:active
         box-shadow inset 0px 0px 3px 2px shade($color_bg_button, 12%)
 
+    @media screen and (max-width: 640px)
+        display block
+
 .btn-light-blue
     @extend .button
     background-color $color_light_blue
@@ -120,7 +107,7 @@ tags(color = $color_dark_blue, bg_color = $color_light_blue)
     color $color_dark_red
 
     &:hover
-        background-color lighten($color_red, 60%)
+        background-color lighten($color_red, 70%)
         border 1px solid lighten($color_red, 40%)
         color @color
 
@@ -130,9 +117,11 @@ tags(color = $color_dark_blue, bg_color = $color_light_blue)
     color white
 
     &:hover
-        background-color darken($color_blue, 10%)
+        background-color lighten($color_blue, 10%)
         border 1px solid darken($color_blue, 20%)
         color @color
+
+        text-shadow 1px 1px 4px rgba($color_blue, 0.8)
 
 .btn-red
     @extend .button
@@ -140,9 +129,15 @@ tags(color = $color_dark_blue, bg_color = $color_light_blue)
     color white
 
     &:hover
-        background-color darken($color_red, 10%)
+        background-color lighten($color_red, 10%)
         border 1px solid darken($color_red, 20%)
         color @color
+        text-shadow 1px 1px 4px rgba($color_red, 0.8)
+
+.btn-small
+    @extend .button
+    padding 0.5em 0.8em
+    font-size 0.75em
 
 
 // Blocks Styles
@@ -160,7 +155,9 @@ tags(color = $color_dark_blue, bg_color = $color_light_blue)
     transition(all 0.5s ease)
 
     &:hover
-        background-color $color_two
+        background-color $color_light_blue
+        outline 1px dashed $color_blue
+
         cursor pointer
 
     .extra-info
@@ -169,10 +166,54 @@ tags(color = $color_dark_blue, bg_color = $color_light_blue)
 
 // Page Style
 
+
+// Shared Styles
+
+// Add padding on both sides for phones
+body > .row
+    @media screen and (max-width: 640px)
+        padding 0 1rem
+
+.title-chapter
+.subtitle-chapter
+    text-align center
+
+.title-chapter
+    margin 1.5em 0 0 0
+
+    font-size 2.4em
+    font-weight 300
+
+    @media screen and (max-width: 640px)
+        font-size 2em
+
+.subtitle-chapter
+    font-size 1.1em
+    font-weight 400
+    text-transform uppercase
+
+.description
+    margin 2em 0
+
+    font-family 'Merriweather', Georgia, serif
+    font-weight 400
+    font-size 1em
+    line-height 1.9em
+
+    @media screen and (max-width: 640px)
+        font-size 1em
+
+    a
+        font-weight 700
+
+
+// Introduction
+
 .intro
     background-color $color_bg
 
     img
+        max-width 100%
         margin 3em 0 0 0
 
     h1
@@ -182,54 +223,53 @@ tags(color = $color_dark_blue, bg_color = $color_light_blue)
         font-size 6.5em
         font-weight normal
 
+        @media screen and (max-width: 640px)
+            margin 0.8em 0 0 0
+            font-size 4em
+
     h2
         margin 0.5em 0 0 0
 
         font-size 1.5em
         font-weight 400
 
+        @media screen and (max-width: 640px)
+            padding 0 1.2em
+            line-height 1.6em
+            font-size 1em
+
     p
-        color $color_secondary
+        color lighten($color_main, 40%)
         font-size 1.1em
         font-weight 400
+
+        @media screen and (max-width: 640px)
+            padding 0 1em
+            font-size 0.9em
 
     .menu
         margin 2em 0 3em 0
 
-.title-chapter
-.subtitle-chapter
-    text-align center
+        @media screen and (max-width: 640px)
+            margin 0
 
-.title-chapter
-    margin 1.5em 0 0 0
-    font-size 2.4em
-    font-weight 300
+        .button
+            @media screen and (max-width: 640px)
+                margin 0 0 0.7em 0
 
-.subtitle-chapter
-    font-size 1.1em
-    font-weight 400
-    text-transform uppercase
+// About Waffle
 
-.description
-    margin 1em 0 0 0
-    color $color_secondary
-    font-size 1.15em
-    line-height 1.6em
+.about-waffle
 
-// Play with the Grid
+    .button
+        @media screen and (max-width: 640px)
+            margin-bottom 0.7em
+
 
 // Justify
 
 .tags
-    .title-menu
-        tags(shade($color_bg, 40%), shade($color_bg, 5%))
-
-    .dish
-        tags()
-
-    .email
-        tags(shade($color_red, 20%), lighten($color_red, 70%))
-
+    margin 1em 0 2em 0
 
 .cannibal-dishes
     position relative
@@ -272,10 +312,14 @@ tags(color = $color_dark_blue, bg_color = $color_light_blue)
         .nav.right
             margin-right -0.5em
 
-// Thanks
+// Fork me!
 
 .fork
     background-color $color_bg
+
+    .unit
+        @media screen and (max-width: 640px)
+            padding 0 1em
 
     .title
         margin 1em 0 0 0
@@ -284,24 +328,49 @@ tags(color = $color_dark_blue, bg_color = $color_light_blue)
         font-weight normal
         font-size 6em
 
+        @media screen and (max-width: 640px)
+            font-size 4em
+
     .description
         margin 0
 
-    .call-to-fork
+    .get-waffle
         margin 1.6em 0 5em 0
+
+        @media screen and (max-width: 640px)
+            margin 1.6em 0 1em 0
+
+    .button
+        @media screen and (max-width: 640px)
+            margin-bottom 0.7em
 
 // Footer
 footer
     background-color $color_red
 
-    p
-        padding 1em 0
-        color $color_bg
+    .content
+        padding 3rem 0
 
-        font-size 0.85em
-        font-weight 600
-        letter-spacing 0.03em
-
-        a
+        p
+            margin 0
             color white
-            border-bottom 1px solid $color_bg
+
+            font-size 0.8em
+            font-weight 700
+            letter-spacing 0.03em
+
+            a
+                color white
+                border-bottom 1px solid lighten($color_red, 25%)
+
+                &:hover
+                    border-bottom 1px solid white
+
+            @media screen and (max-width: 640px)
+                padding 0 1em
+                font-weight 600
+                text-align center
+
+        @media screen and (max-width: 640px)
+            padding 2rem 0
+
