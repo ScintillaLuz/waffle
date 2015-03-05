@@ -1,227 +1,258 @@
+// --------------------
 // Waffle
 // Responsive grid for modular layouts
-// based on http://codepen.io/ilwcss/pen/KdkbI by @ilwcss
-// and inspired by Gridism http://cobyism.com/gridism/ by @cobyism
-// with much help wow from @vrde
+// Inspired by Gridism http://cobyism.com/gridism/ by @cobyism
+// Thanks to @ilwcss @vrde
+// --------------------
+
+// --------------------
+// Set up the grid
+// --------------------
 
 // Reset default margins
 body
-    margin 0
+  margin 0
 
 // Wider wrap on wider screens
 body.wider
-    .row
-        @media screen and (min-width: 1800px)
-            max-width $width_layout_wider
+  .row
+    @media screen and (min-width: 1800px)
+      max-width $width_layout_wider
 
-// Define the box-model
+// Define box-model
 .row
 .unit
-    box-sizing border-box
+  box-sizing border-box
 
+// Self-wrap the row
 .row
-    max-width $width_layout
-    margin 0 auto
-    font-size 0
+  display block
+  max-width $width_layout
+  margin 0 auto
+  font-size 0
 
 .row.no-wrap
-    max-width 100% !important
+  max-width 100% !important
 
-// Define basic unit
+// Define unit behavior
 .unit
-    display inline-block
-    border $border_default solid transparent
-    vertical-align top
-    font-size $type_size
+  float left
+  border $border_default solid transparent
+  vertical-align top
+  font-size $type_size
 
-    @media screen and (max-width: 800px)
-        border $border_tablet solid transparent
+  @media screen and (max-width: 800px)
+    border $border_tablet solid transparent
 
-    @media screen and (max-width: 640px)
-        border $border_phone solid transparent
+  @media screen and (max-width: 640px)
+    border $border_phone solid transparent
 
+// Clearfix after every row
+.row
+  &::before
+  &::after
+    content ''
+    display table
+
+.row
+  &::after
+    clear both
+
+.row
+  zoom 1 // IE 6/7 fix
+
+// --------------------
 // Basic Grid System
+// --------------------
 
 // Define units
 .unit
-    width $full
+  width $full
 
 .u-16
-    width ($full / 6)
+  width ($full / 6)
 
 .u-25
-    width ($full / 4)
+  width ($full / 4)
 
 .u-33
-    width ($full / 3)
+  width ($full / 3)
 
 .u-50
-    width ($full / 2)
+  width ($full / 2)
 
 .u-66
-    width ($full * 2 / 3)
+  width ($full * 2 / 3)
 
 .u-75
-    width ($full * 3 / 4)
+  width ($full * 3 / 4)
 
-// Responsive
+// Responsive behavior
 .row
-    .unit
-        &.u-16
-        &.u-25
-        &.u-33
-        &.u-50
-        &.u-66
-        &.u-75
-            // Stack everything on tablets vertical
-            @media screen and (max-width: 800px)
-                border $border_tablet solid transparent
-                width $full !important
+  .unit
+    &.u-16
+    &.u-25
+    &.u-33
+    &.u-50
+    &.u-66
+    &.u-75
+      // Stack everything on tablets vertical
+      @media screen and (max-width: 800px)
+        border $border_tablet solid transparent
+        width $full !important
 
-            @media screen and (max-width: 640px)
-                border $border_phone solid transparent
+      @media screen and (max-width: 640px)
+        border $border_phone solid transparent
 
 // Quick and dirty centered columns
 .row.single-column
-    .unit
-        &.u-16
-        &.u-25
-        &.u-33
-        &.u-50
-        &.u-66
-        &.u-75
-            display block
-            margin 0 auto
+  .unit
+    &.u-16
+    &.u-25
+    &.u-33
+    &.u-50
+    &.u-66
+    &.u-75
+      display block
+      margin 0 auto
 
-            @media screen and (max-width: 800px)
-                width ($full - $tablet_margins) !important
+      @media screen and (max-width: 800px)
+        width ($full - $tablet_margins) !important
 
-            @media screen and (max-width: 640px)
-                width $full !important
+      @media screen and (max-width: 640px)
+        width $full !important
 
-// Waffle Grid System: the parent tells the children
+// --------------------
+// Waffle Grid System
+// The parent tells the children
+// --------------------
+
 .split3
-    .unit
-        width ($full / 3)
+  .unit
+    width ($full / 3)
 
-        @media screen and (max-width: 800px)
-            width ($full / 2)
-            border $border_tablet solid transparent
+    @media screen and (max-width: 800px)
+      width ($full / 2)
+      border $border_tablet solid transparent
 
 .split4
-    .unit
-        width ($full / 4)
+  .unit
+    width ($full / 4)
 
-        @media screen and (max-width: 800px)
-            width ($full / 3)
-            border $border_tablet solid transparent
+    @media screen and (max-width: 800px)
+      width ($full / 3)
+      border $border_tablet solid transparent
 
 .split5
-    .unit
-        width ($full / 5)
+  .unit
+    width ($full / 5)
 
-        @media screen and (max-width: 1024px)
-            width ($full / 4)
+    @media screen and (max-width: 1024px)
+      width ($full / 4)
 
-        @media screen and (max-width: 800px)
-            width ($full / 3)
-            border $border_tablet solid transparent
+    @media screen and (max-width: 800px)
+      width ($full / 3)
+      border $border_tablet solid transparent
 
 .split6
-    .unit
-        width ($full / 6)
+  .unit
+    width ($full / 6)
 
-        @media screen and (max-width: 1024px)
-            width ($full / 5)
+    @media screen and (max-width: 1024px)
+      width ($full / 5)
 
-        @media screen and (max-width: 800px)
-            width ($full / 3)
-            border $border_tablet solid transparent
+    @media screen and (max-width: 800px)
+      width ($full / 3)
+      border $border_tablet solid transparent
 
 // The basic split keeps two columns on phones
 .split3
 .split4
 .split5
 .split6
-    .unit
-        @media screen and (max-width: 640px)
-            width ($full / 2) !important
-            border $border_phone solid transparent
+  .unit
+    @media screen and (max-width: 640px)
+      width ($full / 2) !important
+      border $border_phone solid transparent
 
 // To have just one column on phones when using split
 .split3.one-column-phones
 .split4.one-column-phones
 .split5.one-column-phones
 .split6.one-column-phones
-    .unit
-        @media screen and (max-width: 640px)
-            width $full !important
-            border $border_phone solid transparent
+  .unit
+    @media screen and (max-width: 640px)
+      width $full !important
+      border $border_phone solid transparent
 
+// --------------------
 // Play with the grid
+// --------------------
 
 // Want to distribute elements evenly in a row?
 .row.justify
-    text-align justify
+  text-align justify
 
-    &::after
-        content ''
-        width $full
-        display inline-block
+  &::after
+    content ''
+    width $full
+    display inline-block
 
 .row.justify
-    .unit
-        width auto
-        vertical-align baseline !important
+  .unit
+    width auto
+    vertical-align baseline !important
 
-        @media screen and (max-width: 640px)
-            width 100% !important
+    @media screen and (max-width: 640px)
+      width 100% !important
 
 // Center every element in a row
 .row.center
-    text-align center
+  text-align center
 
 // Getting rid of borders for nested units
 .row
-    .unit.nested
-        border none !important
+  .unit.nested
+    border none !important
 
 // Remove gutters (applies on the row)
 .no-gutters
-    .unit
-        border none !important
+  .unit
+    border none !important
 
+// --------------------
 // Utility classes
+// --------------------
 
 // Elements are hidden only on desktop screens
 .no-desktop
-    @media screen and (min-width: 960px)
-        display none !important
+  @media screen and (min-width: 960px)
+    display none !important
 
 // Elements are hidden only on small screens, phones
 .no-phone
-    @media screen and (max-width: 640px)
-        display none !important
+  @media screen and (max-width: 640px)
+    display none !important
 
 // Elements are shown only on desktop screens
 .only-desktop
-    @media screen and (max-width: 960px)
-        display none !important
+  @media screen and (max-width: 960px)
+    display none !important
 
 // Elements are shown only on small screens, phones
 .only-phone
-    @media screen and (min-width: 640px)
-        display none !important
+  @media screen and (min-width: 640px)
+    display none !important
 
-// Stop worrying about list types
+// Strip down list styles
 .reset-list
-    margin 0
-    padding 0
-    list-style-type none
+  margin 0
+  padding 0
+  list-style-type none
 
-// When lists are used as horizontal menus
+// ...and display list items one after another
 .menu-list
-    @extend .reset-list
+  @extend .reset-list
 
-    li
-        display inline-block
+  li
+    display inline-block
