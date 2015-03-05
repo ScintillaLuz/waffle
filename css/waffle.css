@@ -13,6 +13,7 @@ body {
   box-sizing: border-box;
 }
 .row {
+  display: block;
   max-width: 1180px;
   margin: 0 auto;
   font-size: 0;
@@ -21,7 +22,7 @@ body {
   max-width: 100% !important;
 }
 .unit {
-  display: inline-block;
+  float: left;
   border: 10px solid transparent;
   vertical-align: top;
   font-size: 16px;
@@ -35,6 +36,17 @@ body {
   .unit {
     border: 5px solid transparent;
   }
+}
+.row::before,
+.row::after {
+  content: '';
+  display: table;
+}
+.row::after {
+  clear: both;
+}
+.row {
+  zoom: 1;
 }
 .unit {
   width: 100%;
@@ -185,7 +197,7 @@ body {
 }
 @media screen and (max-width: 640px) {
   .row.justify .unit {
-    width: auto !important;
+    width: 100% !important;
   }
 }
 .row.center {
