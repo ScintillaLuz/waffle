@@ -29,7 +29,7 @@ body.wider
   display block
   max-width $width_layout
   margin 0 auto
-  font-size 0
+  font-size $type_size
 
 .row.no-wrap
   max-width 100% !important
@@ -39,7 +39,6 @@ body.wider
   float left
   border $border_default solid transparent
   vertical-align top
-  font-size $type_size
 
   @media screen and (max-width: 800px)
     border $border_tablet solid transparent
@@ -105,7 +104,7 @@ body.wider
         border $border_phone solid transparent
 
 // Quick and dirty centered columns
-.row.single-column
+.row.single-centered-column
   .unit
     &.u-16
     &.u-25
@@ -124,7 +123,7 @@ body.wider
 
 // --------------------
 // Waffle Grid System
-// The parent tells the children
+// The parent instructs the children
 // --------------------
 
 .split3
@@ -165,24 +164,24 @@ body.wider
       width ($full / 3)
       border $border_tablet solid transparent
 
-// The basic split keeps two columns on phones
+// Stack everything on one column for phones
 .split3
 .split4
 .split5
 .split6
   .unit
     @media screen and (max-width: 640px)
-      width ($full / 2) !important
+      width $full !important
       border $border_phone solid transparent
 
-// To have just one column on phones when using split
-.split3.one-column-phones
-.split4.one-column-phones
-.split5.one-column-phones
-.split6.one-column-phones
+// To instead keep a two-columns layout on phones
+.split3.two-columns-phones
+.split4.two-columns-phones
+.split5.two-columns-phones
+.split6.two-columns-phones
   .unit
     @media screen and (max-width: 640px)
-      width $full !important
+      width ($full / 2) !important
       border $border_phone solid transparent
 
 // --------------------
@@ -200,14 +199,16 @@ body.wider
 
 .row.justify
   .unit
+    display inline-block
     width auto
     vertical-align baseline !important
 
     @media screen and (max-width: 640px)
       width 100% !important
 
-// Center every element in a row
+// Center every element in a row and/or unit
 .row.center
+.row .unit.center
   text-align center
 
 // Getting rid of borders for nested units
