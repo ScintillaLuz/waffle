@@ -9,6 +9,15 @@
 // Set up the grid
 // --------------------
 
+// Define box-model
+html
+  box-sizing border-box
+
+*
+*:before
+*:after
+  box-sizing inherit
+
 // Reset default margins
 body
   margin 0
@@ -19,11 +28,6 @@ body.wider
     @media screen and (min-width: 1800px)
       max-width $width_layout_wider
 
-// Define box-model
-.row
-.unit
-  box-sizing border-box
-
 // Self-wrap the row
 .row
   display block
@@ -31,20 +35,26 @@ body.wider
   margin 0 auto
   font-size $type_size
 
+  @media screen and (max-width: 800px)
+    margin 0 $tablet_margins
+
+  @media screen and (max-width: 640px)
+    margin 0 $phone_margins
+
 .row.no-wrap
   max-width 100% !important
 
 // Define unit behavior
-.unit
-  float left
-  border $border_default solid transparent
-  vertical-align top
+.row
+  .unit
+    float left
+    border $border_default solid transparent
 
-  @media screen and (max-width: 800px)
-    border $border_tablet solid transparent
+    @media screen and (max-width: 800px)
+      border $border_tablet solid transparent
 
-  @media screen and (max-width: 640px)
-    border $border_phone solid transparent
+    @media screen and (max-width: 640px)
+      border $border_phone solid transparent
 
 // Clearfix after every row
 .row
@@ -112,6 +122,7 @@ body.wider
     &.u-50
     &.u-66
     &.u-75
+      float none
       display block
       margin 0 auto
 
@@ -121,6 +132,7 @@ body.wider
       @media screen and (max-width: 640px)
         width $full !important
 
+>>>>>>> master
 // --------------------
 // Waffle Grid System
 // The parent instructs the children
