@@ -203,6 +203,9 @@ body.wider
 .row.justify
   text-align justify
 
+  .unit
+    display inline-block
+
   &::after
     content ''
     width $full
@@ -219,8 +222,9 @@ body.wider
 
 // Center every element in a row and/or unit
 .row.center
-.row .unit.center
-  text-align center
+.row
+  .unit.center
+    text-align center
 
 // Getting rid of borders for nested units
 .row
