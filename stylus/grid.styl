@@ -31,15 +31,14 @@ body.wider
 // Self-wrap the row
 .row
   display block
-  max-width $width_layout
-  margin 0 auto
+  // margin 0 auto
   font-size $type_size
 
-  @media screen and (max-width: 800px)
-    margin 0 $tablet_margins
+  // @media screen and (max-width: 800px)
+  //   margin 0 $tablet_margins
 
-  @media screen and (max-width: 640px)
-    margin 0 $phone_margins
+  // @media screen and (max-width: 640px)
+  //   margin 0 $phone_margins
 
 .row.no-wrap
   max-width 100% !important
@@ -47,6 +46,7 @@ body.wider
 // Define unit behavior
 .row
   .unit
+    max-width $width_layout
     float left
     border $border_default solid transparent
 
