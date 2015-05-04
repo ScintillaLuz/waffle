@@ -194,27 +194,6 @@ body.wider
 // Play with the grid
 // --------------------
 
-// Want to distribute elements evenly in a row?
-.row.justify
-  text-align justify
-
-  .unit
-    display inline-block
-
-  &::after
-    content ''
-    width $full
-    display inline-block
-
-.row.justify
-  .unit
-    display inline-block
-    width auto
-    vertical-align baseline !important
-
-    @media screen and (max-width: 640px)
-      width 100% !important
-
 // Center every element in a row and/or unit
 .row.center
 .row
