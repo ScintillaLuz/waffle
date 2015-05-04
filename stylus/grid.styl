@@ -11,6 +11,7 @@
 
 // Define box-model
 html
+.banner
 .row
 .unit
   box-sizing border-box
@@ -41,14 +42,9 @@ body.wider
   @media screen and (max-width: 640px)
     margin 0 $phone_margins
 
-.row.no-wrap
-  max-width 100% !important
-
-  @media screen and (max-width: 800px)
-    margin 0 auto
-
-  @media screen and (max-width: 640px)
-    margin 0 auto
+// For banner-style sections
+.banner
+  max-width 100%
 
 // Define unit behavior
 .row
