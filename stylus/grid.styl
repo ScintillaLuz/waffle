@@ -11,12 +11,13 @@
 
 // Define box-model
 html
+.row
+.unit
   box-sizing border-box
 
-*
-*:before
-*:after
-  box-sizing inherit
+  *:before
+  *:after
+    box-sizing inherit
 
 // Reset default margins
 body
@@ -31,17 +32,23 @@ body.wider
 // Self-wrap the row
 .row
   display block
-  // margin 0 auto
-  font-size $type_size
+  max-width $width_layout
+  margin 0 auto
 
-  // @media screen and (max-width: 800px)
-  //   margin 0 $tablet_margins
+  @media screen and (max-width: 800px)
+    margin 0 $tablet_margins
 
-  // @media screen and (max-width: 640px)
-  //   margin 0 $phone_margins
+  @media screen and (max-width: 640px)
+    margin 0 $phone_margins
 
 .row.no-wrap
   max-width 100% !important
+
+  @media screen and (max-width: 800px)
+    margin 0 auto
+
+  @media screen and (max-width: 640px)
+    margin 0 auto
 
 // Define unit behavior
 .row
@@ -132,7 +139,6 @@ body.wider
       @media screen and (max-width: 640px)
         width $full !important
 
->>>>>>> master
 // --------------------
 // Waffle Grid System
 // The parent instructs the children
@@ -204,6 +210,9 @@ body.wider
 .row.justify
   text-align justify
 
+  .unit
+    display inline-block
+
   &::after
     content ''
     width $full
@@ -220,8 +229,9 @@ body.wider
 
 // Center every element in a row and/or unit
 .row.center
-.row .unit.center
-  text-align center
+.row
+  .unit.center
+    text-align center
 
 // Getting rid of borders for nested units
 .row
