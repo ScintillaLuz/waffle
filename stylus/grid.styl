@@ -11,12 +11,13 @@
 
 // Define box-model
 html
+.row
+.unit
   box-sizing border-box
 
-*
-*:before
-*:after
-  box-sizing inherit
+  *:before
+  *:after
+    box-sizing inherit
 
 // Reset default margins
 body
@@ -33,7 +34,6 @@ body.wider
   display block
   max-width $width_layout
   margin 0 auto
-  font-size $type_size
 
   @media screen and (max-width: 800px)
     margin 0 $tablet_margins
